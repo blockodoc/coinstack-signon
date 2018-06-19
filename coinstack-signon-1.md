@@ -1,5 +1,7 @@
 # Coinstack SignOn 소개
 
+## Coinstack SignOn 안내서
+
 Coinstack SignOn은 블록체인 기반의 OAuth 2.0 표준을 지원하는 서버와 관리 도구입니다. Coinstack SignOn을 통해 통합 계정, SSO 등의 시스템을 구축할 수 있습니다.
 
 이 문서는 다음과 같은 내용을 기술하고 있습니다.
