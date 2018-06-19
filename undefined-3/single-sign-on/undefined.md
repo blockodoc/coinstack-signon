@@ -64,21 +64,15 @@ $ coinstack-signon server start
 
 페이지 확인을 위해 서버를 구동합니다. ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-{% code-tabs %}
-{% code-tabs-item title="Servlet" %}
+*Servlet*
 ```text
 $ mvn jetty:run
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="Spring" %}
+*Spring*
 ```text
 $ mvn spring-boot:run -Dspring.profiles.active=development
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 서버가 구동되면 브라우저를 이용해서 [http://localhost:8888/main\_page.jsp](http://localhost:8888/main_page.jsp)에 접근해봅니다.
 
@@ -428,13 +422,10 @@ private String sendPost(String uri, String params, String clientInfo) throws Exc
 
 이후, 두 서버를 구동하기 위해 각각의 ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-{% code-tabs %}
-{% code-tabs-item title="Servlet" %}
+*Servlet*
 ```text
 $ mvn jetty:run
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 #### 
 
@@ -452,13 +443,10 @@ server:
 
 이후, 두 서버를 구동하기 위해 각각의 ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-{% code-tabs %}
-{% code-tabs-item title="Spring" %}
+*Spring*
 ```text
 $ mvn spring-boot:run -Dspring.profiles.active=development
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 localhost:8888/main\_page.jsp로 접속하면 SignOn 서버의 로그인 페이지로 리다이렉션됩니다.
 

@@ -97,8 +97,7 @@ pom.xml에서는 라이브러리를 가져오기 위해서 Maven 저장소 정�
 
 스프링 설정을 위해서는 application-development.yaml 파일이 필요합니다. 파일의 경로는${PROJECT\_HOME}/src/resource/application-development.yaml 입니다. 
 
-{% code-tabs %}
-{% code-tabs-item title="application-development.yaml" %}
+*application-development.yaml*
 ```yaml
 server:
   hostname: {$hostname}
@@ -109,12 +108,8 @@ spring:
       prefix: /
       suffix: .jsp
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="info" %}
-예제에서는 server.hostname=localhost:8080 , server.port=8888 을 사용하였습니다.
-{% endhint %}
+> 예제에서는 server.hostname=localhost:8080 , server.port=8888 을 사용하였습니다.
 
 ### 프로젝트 업데이트
 
