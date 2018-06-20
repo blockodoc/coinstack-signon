@@ -1,10 +1,10 @@
 # 리소스 서버 만들기
 
-### 환경 설정
+## 환경 설정
 
 본 예제를 실행하기 위해 환경 설정은 다음과 같은 순서로 진행합니다.
 
-#### 클라이언트 등록
+### 클라이언트 등록
 
 ```text
 $ coinstack-signon client create --privatekey ${ADMIN_PRIVATEKEY} <<EOF
@@ -18,7 +18,7 @@ $ coinstack-signon client create --privatekey ${ADMIN_PRIVATEKEY} <<EOF
 EOF
 ```
 
-#### 사용자 등록
+### 사용자 등록
 
 ```text
 $ coinstack-signon user create --privatekey ${ADMIN_PRIVATEKEY} <<EOF
@@ -30,7 +30,7 @@ $ coinstack-signon user create --privatekey ${ADMIN_PRIVATEKEY} <<EOF
 EOF
 ```
 
-#### SignOn 서버 구동
+### SignOn 서버 구동
 
 ```text
 $ coinstack-signon server start
@@ -38,13 +38,13 @@ $ coinstack-signon server start
 
 이에 대한 자세한 설정은 [서버](../../coinstack-signon-2/undefined-1/), [클라이언트](../../coinstack-signon-2/undefined-2.md), [사용자](../../coinstack-signon-2/undefined-3.md)를 참조하시기 바랍니다.
 
-### 리소스 만들기
+## 리소스 만들기
 
 사용자가 접근하는 리소스\(페이지\)를 작성합니다.
 
 리소스 파일은 다음과 같으며, ${PROJECT\_HOME}/src/main/webapp 디렉터리에 생성합니다.
 
-#### main\_page.jsp
+### main\_page.jsp
 
 ```text
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -60,16 +60,18 @@ $ coinstack-signon server start
 </html>
 ```
 
-### 페이지 확인
+## 페이지 확인
 
 페이지 확인을 위해 서버를 구동합니다. ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-*Servlet*
+_Servlet_
+
 ```text
 $ mvn jetty:run
 ```
 
-*Spring*
+_Spring_
+
 ```text
 $ mvn spring-boot:run -Dspring.profiles.active=development
 ```
@@ -78,11 +80,11 @@ $ mvn spring-boot:run -Dspring.profiles.active=development
 
 ![](../../.gitbook/assets/sso-main-page1%20%282%29.png)
 
-### Client 정보
+## Client 정보
 
 다음은 사용자 인증에 필요한 데이터 목록입니다.
 
-#### 서블릿 필터 만들기
+### 서블릿 필터 만들기
 
 @WebFilter는 필터를 적용할 범위를 지정할 수 있습니다.
 
@@ -92,7 +94,7 @@ SSO에서 필터의 흐름과 이에 따른 코드는 다음과 같습니다.
 
 ![](../../.gitbook/assets/servlet-filter-flow.png)
 
-#### SSOFilter.java
+### SSOFilter.java
 
 ```java
 @WebFilter("*")
@@ -144,7 +146,7 @@ public class SSOFilter implements Filter {
 }
 ```
 
-#### AuthService.java
+### AuthService.java
 
 Authorization Service를 지원하는 클래스로 SSO를 제공하기 위해 다음과 같은 메서드들을 사용합니다.
 
@@ -402,13 +404,13 @@ private String sendPost(String uri, String params, String clientInfo) throws Exc
 }
 ```
 
-### 실행 결과
+## 실행 결과
 
 테스트를 위해 다음과 같이 프로젝트를 복사합니다.
 
 ![](../../.gitbook/assets/sso-copy-project.png)
 
-#### Servlet
+### Servlet
 
 복사한 프로젝트의 포트 번호를 8889로 다음과 같이 변경합니다.
 
@@ -422,14 +424,13 @@ private String sendPost(String uri, String params, String clientInfo) throws Exc
 
 이후, 두 서버를 구동하기 위해 각각의 ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-*Servlet*
+_Servlet_
+
 ```text
 $ mvn jetty:run
 ```
 
-#### 
-
-#### Spring
+### Spring
 
 복사한 프로젝트의 포트 번호를 8889로 다음과 같이 변경합니다.
 
@@ -443,7 +444,8 @@ server:
 
 이후, 두 서버를 구동하기 위해 각각의 ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-*Spring*
+_Spring_
+
 ```text
 $ mvn spring-boot:run -Dspring.profiles.active=development
 ```

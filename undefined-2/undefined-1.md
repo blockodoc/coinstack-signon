@@ -1,12 +1,10 @@
 # 설치 확인
 
-
-
 정상적으로 설치됐다면 다음과 같은 메시지와 함께, coinstack-signon-${VERSION}의 형태의 디렉터리가 생성된것을 확인할 수 있습니다.
 
 ![](../.gitbook/assets/install-success%20%281%29.png)
 
-### 설치 디렉터리
+## 설치 디렉터리
 
 설치 디렉터리 목록은 다음과 같습니다.
 
@@ -28,7 +26,7 @@ coinstack.yaml 파일은 설치 후에는 존재하지 않으나, 서버 설정�
 | lib | 실행을 위한 라이브러리를 위한 디렉터리 |
 | log | 실행 로그가 쌓이는 디렉터리 |
 
-### YAML
+## YAML
 
 데이터 직렬화 양식으로 주로 XML과 같이 설정 파일 역할을 담당하는 언어로,
 
@@ -36,7 +34,7 @@ Coinstack SignOn 서버를 구동하기 위해 필요한 설정들을 담고 있
 
 이 언어에 대한 자세한 사항은 [http://yaml.org/](http://yaml.org/)을 참조하시기 바랍니다.
 
-#### 작성 방법
+### 작성 방법
 
 다음과 같이 들여쓰기에 유의하며 작성합니다.
 
@@ -52,6 +50,4 @@ signon:
     privatekeys: |
       L46DA9eQzqEaQGe8bQh3YTpwCaokLsiTEmXvaqbUkfGwY47so24J
 ```
-
-
 

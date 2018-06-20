@@ -51,13 +51,13 @@ pom.xml에서는 라이브러리를 가져오기 위해서 Maven 저장소 정�
         <artifactId>json</artifactId>
         <version>20080701</version>
     </dependency>
-    
+
     <!-- spring boot -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    
+
     <!-- jsp -->
     <dependency>
         <groupId>javax.servlet</groupId>
@@ -67,7 +67,7 @@ pom.xml에서는 라이브러리를 가져오기 위해서 Maven 저장소 정�
         <groupId>org.apache.tomcat.embed</groupId>
         <artifactId>tomcat-embed-jasper</artifactId>
     </dependency>
-    
+
     <!-- spring security -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -95,9 +95,10 @@ pom.xml에서는 라이브러리를 가져오기 위해서 Maven 저장소 정�
 
 스프링 application-development.yaml 파일 생성
 
-스프링 설정을 위해서는 application-development.yaml 파일이 필요합니다. 파일의 경로는${PROJECT\_HOME}/src/resource/application-development.yaml 입니다. 
+스프링 설정을 위해서는 application-development.yaml 파일이 필요합니다. 파일의 경로는${PROJECT\_HOME}/src/resource/application-development.yaml 입니다.
 
-*application-development.yaml*
+_application-development.yaml_
+
 ```yaml
 server:
   hostname: {$hostname}
@@ -131,17 +132,17 @@ class WebApplication {
   public String mainPage(){ 
     return "main_page"; 
   }
-   
+
   @RequestMapping("/admin_page")
   public String adminPage() {
     return "admin_page"; 
   }
-   
+
   @RequestMapping("/user_page")
   public String userPage() {
     return "user_page"; 
   }
-   
+
   @Bean
   public ErrorPageRegistrar errorPageRegistrar() {
     return new ErrorPageRegistrar() {
@@ -150,7 +151,7 @@ class WebApplication {
       } 
     };
   }
-  
+
   public static void main(String[] args) {
     SpringApplication.run(WebApplication.class, args); 
   }

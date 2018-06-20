@@ -48,7 +48,14 @@ Coinstack SignOn 서버는 Spring Boot 2.0기반으로 구현되어 있습니다
 
 Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드포인트는 다음과 같습니다.
 
-![](../../.gitbook/assets/endpoint-synopsis.png)
+| **Path** | **API 설명** | **비 고** |
+| --- | --- | --- | --- | --- | --- | --- |
+| /oauth/authorize | 클라이언트의 정보를 받아 접근 권한을 확인해주는 엔드포인트 |  |
+| /oauth/token | 액세스 토큰을 발급해주는 엔드포인트 |  |
+| /oauth/check\_token | 액세스 토큰을 확인해주는 엔드포인트 |  |
+| /oauth/logout | 로그아웃해주는 엔드포인트 |  |
+| /oauth/confirm\_access | userApprovalPage로 리다이렉션해주는 엔드포인트 |  |
+| /oauth/error | 에러 발생 내용을 보여주는 엔드포인트 |  |
 
 #### **/oauth/authorize**
 
