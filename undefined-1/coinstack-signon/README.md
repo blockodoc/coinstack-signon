@@ -48,25 +48,70 @@ Coinstack SignOn 서버는 Spring Boot 2.0기반으로 구현되어 있습니다
 
 Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드포인트는 다음과 같습니다.
 
-![](../../.gitbook/assets/endpoint-synopsis%20%281%29.png)
+Path | API 설명 | 비 고
+---- | ------- | ----
+/oauth/authorize | 클라이언트의 정보를 받아 접근 권한을 확인해주는 엔드포인트 |
+/oauth/token | 액세스 토큰을 발급해주는 엔드포인트 |
+/oauth/check_token | 액세스 토큰을 확인해주는 엔드포인트 |
+/oauth/logout | 로그아웃해주는 엔드포인트 |
+/oauth/error | 에러 발생 내용을 보여주는 엔드포인트 |
+
 
 #### **/oauth/authorize**
 
 클라이언트의 정보를 받아 **접근 권한을 확인**해주는 엔드포인트
-
-![](../../.gitbook/assets/endpoint-detail-authorize.png)
+##### **Query Parameters**
+Parameter | Description | Values
+--------- | ----------- | ------
+response_type | 사용할 권한 부여 처리 과정을 결정 <br> Authorization Code, Implicit 방식에서 사용 | String <br> · code <br> · token
+grant_type | 인가 증명 방식을 결정하기 위해 사용 | String <br> · authorization_code <br> · implicit <br> · password <br> · client_credentials
+scope | 클라이언트에서 사용자에게 허가를 요구하는 범위를 결정하기 위해 사용 |
+client_id | 클라이언트 식별자 |
+secret | 클라이언트 비밀번호 |
+redirect_uri | SignOn 서버에서 인증/인가 후 반환되는 URI |
+##### **Response**
+Parameter | Description
+--------- | ----------- 
+200 | OK
+302 | Redirection
+401 | Bad Client Credentials 
+500 | Error             
 
 #### **/oauth/token**
 
 **액세스 토큰을 발급**해주는 엔드포인트
-
-![](../../.gitbook/assets/endpoint-detail-token.png)
+##### **Query Parameters**
+Parameter | Description | Values
+--------- | ----------- | ------
+grant_type | 인가 증명 방식을 결정하기 위해 사용 | String <br> · authorization_code <br> · password <br> · client_credentials <br> · refresh_token
+redirect_uri | SignOn 서버에서 인증/인가 후 반환되는 URI |
+code | 인가 증명 방식이 Authorization Code 방식일 경우 사용 |
+username | 인가 증명 방식이 Password 방식일 경우 사용 | 
+password | 인가 증명 방식이 Password 방식일 경우 사용 |
+refresh_token | 인가 증명 방식이 Refresh Token 방식일 경우 사용 |
+##### **Response**
+Parameter | Description | Values
+--------- | ----------- | ------
+access_token | 액세스 토큰값 |
+refresh_token | 리프레시 토큰값 |
+scope | 클라이언트에서 사용자에게 허가를 요구하는 범위 |
+token_type | 액세스 토큰의 타입 | String <br> · bearer
+expires_in | 액세스 토큰 만료 시간 |    
 
 #### **/oauth/check\_token**
 
 액세스 토큰을 확인해주는 엔드포인트
-
-![](../../.gitbook/assets/endpoint-detail-check-token.png)
+##### **Query Parameters**
+Parameter | Description | Values
+--------- | ----------- | ------
+token | 확인할 액세스 토큰값 |
+##### **Response**
+Parameter | Description 
+--------- | ----------- 
+user_name | 사용자 식별자
+scope | 클라이언트에서 사용자에게 허가를 요구하는 범위
+authorities | 사용자 접근 권한
+client_id | 클라이언트 식별자
 
 #### **/oauth/logout**
 
