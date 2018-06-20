@@ -46,7 +46,7 @@ Coinstack SignOn 서버는 Spring Boot 2.0기반으로 구현되어 있습니다
 
 ### E**ndpoint**
 
-Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드포인트는 다음과 같습니다..
+Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드포인트는 다음과 같습니다.
 
 ![](../../.gitbook/assets/endpoint-synopsis%20%281%29.png)
 
