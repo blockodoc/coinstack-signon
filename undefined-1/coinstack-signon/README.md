@@ -77,6 +77,7 @@ Parameter | Description
 401 | Bad Client Credentials 
 500 | Error             
 
+
 #### **/oauth/token**
 
 **액세스 토큰을 발급**해주는 엔드포인트
@@ -98,6 +99,7 @@ scope | 클라이언트에서 사용자에게 허가를 요구하는 범위 |
 token_type | 액세스 토큰의 타입 | String <br> · bearer
 expires_in | 액세스 토큰 만료 시간 |    
 
+
 #### **/oauth/check\_token**
 
 액세스 토큰을 확인해주는 엔드포인트
@@ -113,6 +115,7 @@ scope | 클라이언트에서 사용자에게 허가를 요구하는 범위
 authorities | 사용자 접근 권한
 client_id | 클라이언트 식별자
 
+
 #### **/oauth/logout**
 
 로그아웃을 하고 accessToken을 만기하는 엔드포인트
@@ -124,11 +127,13 @@ Parameter | Description | Values
 access_token | 만료할 액세스 토큰값 |
 redirect_uri | 사용 중인 redirect_uri |
 
+
 #### **/oauth/confirm\_access**
 
 **userApprovalPage**로 리다이랙션시켜주는 엔드포인트
 
 사용자가 허가의 승인을 확인하는 POST 요청을 받습니다.
+
 
 #### **/oauth/error**
 
