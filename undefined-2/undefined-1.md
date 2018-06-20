@@ -12,10 +12,10 @@
 
 coinstack.yaml 파일은 설치 후에는 존재하지 않으나, 서버 설정에서 생성합니다.
 
-설정 방법은 [서버 환경 설정](../coinstack-signon-2/undefined-1/undefined.md)을 참조하시기 바랍니다. ![](blob:https://legacy.gitbook.com/c655df7a-0fdf-4695-9453-fb5db5299841)
+설정 방법은 [서버 환경 설정](../coinstack-signon-2/undefined-1/undefined.md)을 참조하시기 바랍니다.
 
 | 파일명 | 용도 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- |
 | bin | 실행 명령들이 있는 디렉터리 |
 | ┗ coinstack-signon | 노드 및 사용자 관리 |
 | ┗ coinstack-function-test | 기능 테스트 |
