@@ -118,8 +118,11 @@ client_id | 클라이언트 식별자
 로그아웃을 하고 accessToken을 만기하는 엔드포인트
 
 access\_token, redirect\_uri 인자는 필수적이며 로그아웃이 완료되면 **${REDIRECT\_URI}**로 리다이렉션됩니다.
-
-![](../../.gitbook/assets/endpoint-detail-logout.png)
+##### **Query Parameters**
+Parameter | Description | Values
+--------- | ----------- | ------
+access_token | 만료할 액세스 토큰값 |
+redirect_uri | 사용 중인 redirect_uri |
 
 #### **/oauth/confirm\_access**
 
