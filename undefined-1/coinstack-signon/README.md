@@ -62,7 +62,7 @@ Path | API 설명 | 비 고
 클라이언트의 정보를 받아 **접근 권한을 확인**해주는 엔드포인트
 ##### **Query Parameters**
 Parameter | Description | Values
---------- | ----------- | ------
+--------- | ---------- | -------
 response_type | 사용할 권한 부여 처리 과정을 결정 <br> Authorization Code, Implicit 방식에서 사용 | String <br> · code <br> · token
 grant_type | 인가 증명 방식을 결정하기 위해 사용 | String <br> · authorization_code <br> · implicit <br> · password <br> · client_credentials
 scope | 클라이언트에서 사용자에게 허가를 요구하는 범위를 결정하기 위해 사용 |
