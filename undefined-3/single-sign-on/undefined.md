@@ -64,14 +64,12 @@ $ coinstack-signon server start
 
 페이지 확인을 위해 서버를 구동합니다. ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-_Servlet_
-
+!FILENAME _Servlet_
 ```text
 $ mvn jetty:run
 ```
 
-_Spring_
-
+!FILENAME _Spring_
 ```text
 $ mvn spring-boot:run -Dspring.profiles.active=development
 ```
@@ -424,8 +422,7 @@ private String sendPost(String uri, String params, String clientInfo) throws Exc
 
 이후, 두 서버를 구동하기 위해 각각의 ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-_Servlet_
-
+!FILENAME _Servlet_
 ```text
 $ mvn jetty:run
 ```
@@ -444,8 +441,7 @@ server:
 
 이후, 두 서버를 구동하기 위해 각각의 ${PROJECT\_HOME}에서 다음의 명령어를 실행합니다.
 
-_Spring_
-
+!FILENAME _Spring_
 ```text
 $ mvn spring-boot:run -Dspring.profiles.active=development
 ```
