@@ -4,7 +4,8 @@
         "codeblock-filename"
     ],
     "pdf": {
-        "fontSize": 10,
+        "fontSize": 11,
+        "fontFamily": "NanumGothic",
         "paperSize": "a4",
         "chapterMark": "both",  
         "margin": {
