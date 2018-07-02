@@ -4,7 +4,7 @@ Coinstack SignOn 서버는 직접 컴퓨터에 설치하여 구동할 수 있는
 
 ### 서버 구동 모드
 
-Coinstack SignOn 서버는 다음 화면처럼 native, docker 값으로 구동 모드를 설정할 수 있습니다. 
+Coinstack SignOn 서버는 다음 화면처럼 native, docker 값으로 구동 모드를 설정할 수 있습니다. 기본 설정은 **Native 모드**입니다.
 
 ![](../../.gitbook/assets/server-mode1.png)
 
