@@ -1,12 +1,22 @@
 # 서버 관리
 
-Coinstack SignOn 서버는 '**./coinstack-signon server 명령어'** 로 관리할 수 있습니다.
+Coinstack SignOn 서버는 직접 컴퓨터에 설치하여 구동할 수 있는 **Native 모드**와 특정 환경에 상관없이 구동할 수 있는 **Docker 모드**로 관리할 수 있습니다.
+
+### 서버 구동 모드
+
+Coinstack SignOn 서버는 다음 화면처럼 native, docker 값으로 구동 모드를 설정할 수 있습니다. 
+
+![](../../.gitbook/assets/server-mode1.png)
+
+![](../../.gitbook/assets/server-mode2.png)
 
 ### 서버 실행
 
 Coinstack SignOn 서버는 다음의 명령어를 통해 실행 가능합니다.
 
 #### **일반 실행**
+
+**Docker 모드**의 경우 백그라운드 process로 유지하기 때문에 run 명령을 지원하지 않습니다.
 
 ```text
 $ coinstack-signon server run
@@ -37,6 +47,8 @@ Server started
 프로필을 사용하면 미리 설정해 놓은 환경설정 파일들을 반영할 수 있습니다.
 
 프로필은 다음의 명령어를 통해 사용 가능합니다.
+
+**Docker 모드**의 경우 start 명령으로 프로필 설정을 지원합니다.
 
 ```text
 $ coinstack-signon server start --profile test
