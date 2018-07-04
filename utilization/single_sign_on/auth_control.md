@@ -44,7 +44,7 @@ EOF
 $ coinstack-signon server start
 ```
 
-이에 대한 자세한 사항은 [서버](../../coinstack-signon-2/undefined-1/), [클라이언트](../../coinstack-signon-2/undefined-2.md), [사용자](../../coinstack-signon-2/undefined-3.md)를 참조하시기 바랍니다.
+이에 대한 자세한 사항은 [서버](../../getting_started/server/), [클라이언트](../../getting_started/client.md), [사용자](../../getting_started/user.md)를 참조하시기 바랍니다.
 
 ### 리소스 만들기
 
@@ -113,7 +113,7 @@ $ coinstack-signon server start
 
 다음의 코드는 SSO 서블릿 필터 코드에 권한 제어 코드를 추가한 것입니다.
 
-SSO 서블릿 필터 코드와 관련된 설명, 설정은 [Servlet 기반의 리소스 서버 만들기](undefined.md)를 참조하시기 바랍니다.
+SSO 서블릿 필터 코드와 관련된 설명, 설정은 [Servlet 기반의 리소스 서버 만들기](resource_server.md)를 참조하시기 바랍니다.
 
 권한 제어에서 필터의 흐름과 이에 따른 코드는 다음과 같습니다.
 

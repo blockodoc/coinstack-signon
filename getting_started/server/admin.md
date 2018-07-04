@@ -127,7 +127,7 @@ No process detected
 
 ![](../../.gitbook/assets/initial-server-status.png)
 
-따라서 [기능 테스트](../../appendix/undefined-3/undefined.md), [부하 테스트](../../appendix/undefined-3/undefined-1.md) 등의 OAuth 2.0 서비스를 이용하면, 다음과 같이 서버 현황을 확인할 수 있습니다.
+따라서 [기능 테스트](../../appendix/test/function.md), [부하 테스트](../../appendix/test/load.md) 등의 OAuth 2.0 서비스를 이용하면, 다음과 같이 서버 현황을 확인할 수 있습니다.
 
 ![](../../.gitbook/assets/server-status.png)
 

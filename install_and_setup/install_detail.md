@@ -10,7 +10,7 @@
 
 coinstack.yaml 파일은 설치 후에는 존재하지 않으나, 서버 설정에서 생성합니다.
 
-설정 방법은 [서버 환경 설정](../coinstack-signon-2/undefined-1/undefined.md)을 참조하시기 바랍니다.
+설정 방법은 [서버 환경 설정](../getting_started/server/config.md)을 참조하시기 바랍니다.
 
 | 파일명 | 용도 |
 | --- | --- |

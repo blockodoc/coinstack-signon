@@ -98,7 +98,7 @@ $ coinstack-signon help key
 Process to generate the configuration file? [y/n]  y
 ```
 
-※ 관리자의 주소와 서버의 개인키를 따로 설정하는 이유는[ Coinstack SignOn](../../undefined-1/coinstack-signon/)을 참조합니다.
+※ 관리자의 주소와 서버의 개인키를 따로 설정하는 이유는[ Coinstack SignOn](../../overview/coinstack_signon/)을 참조합니다.
 
 #### 일괄 처리 명령을 통해 설정하기
 

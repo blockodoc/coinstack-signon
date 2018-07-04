@@ -36,7 +36,7 @@ signon:
 
 ![](../../.gitbook/assets/login-form-empty.png)
 
-**User**와 **Password**에 [사용자](../../coinstack-signon-2/undefined-3.md)에서 등록한 사용자를 입력합니다. 해당 사용자와 패스워드는 기본 모듈의 사용자 정보 저장소에 등록된 사용자 정보입니다. 즉, 새로운 모듈을 적용하였으므로, 다음과 같이 로그인에 실패해야 합니다.
+**User**와 **Password**에 [사용자](../../getting_started/user.md)에서 등록한 사용자를 입력합니다. 해당 사용자와 패스워드는 기본 모듈의 사용자 정보 저장소에 등록된 사용자 정보입니다. 즉, 새로운 모듈을 적용하였으므로, 다음과 같이 로그인에 실패해야 합니다.
 
 ![](../../.gitbook/assets/login-form-error%20%281%29.png)
 
