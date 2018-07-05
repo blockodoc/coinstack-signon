@@ -26,7 +26,7 @@ SignOn에서는 AccessToken과 관련된 모델이 가장 중요하고 빈번하
 
 ![](../../.gitbook/assets/token-seq.png)
 
-해당 요청들은 최종적으로 모두 TokenGranter를 통해 token을 발행하도록 요청합니다. 그 과정에서Authorization code를 발행하거나 사용자의 인가를 받기도 하지만 최좀 목표는 토큰을 발행받는 것이기 때문에 이는 당연합니다.
+해당 요청들은 최종적으로 모두 TokenGranter를 통해 token을 발행하도록 요청합니다. 그 과정에서 Authorization code를 발행하거나 사용자의 인가를 받기도 하지만 최좀 목표는 토큰을 발행받는 것이기 때문에 이는 당연합니다.
 
 ### TokenGranter
 
