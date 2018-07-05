@@ -6,7 +6,7 @@ SignOn에서는 AccessToken과 관련된 모델이 가장 중요하고 빈번하
 
 관련 모델은 다음과 같습니다.
 
-![](https://github.com/blockodoc/coinstack-signon/tree/master/.gitbook/assets/main-model.png)
+<img src="../../.gitbook/assets/main-model.png" alt="">
 
 이 모델을 이해하기 위해서 현실에서 일어나는 일을 예로 들어보겠습니다.
 
