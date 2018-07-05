@@ -43,7 +43,7 @@ EOF
 * 클라이언트 정보 파일인 ${CLIENT\_INFO\_FILE}을 생성하여 등록할 클라이언트 정보를 저장합니다.
 
 ```text
-{
+[{
   "clientId": "${CLIENT_ID}",
   "clientSecret": "${CLIENT_SECRET}",
   "authorizedGrantTypes": ["${GRANT_TYPE}", ...],
@@ -56,7 +56,7 @@ EOF
   "refreshTokenValidity": "${REFRESH_TOKEN_VALIDITY}",
   "description": "${DESCRIPTION}",
   "additionalInformation": {"${ADDITIONAL_INFO_KEY}":"${ADDITIONAL_INFO_VALUE}"}
-}
+}, ...]
 ```
 
 * 클라이언트 정보 파일을 통해 클라이언트 정보를 등록합니다.

@@ -2,50 +2,52 @@
 
 토큰은 리소스 서버에 리소스를 요청하기 위해 인가 서버로부터 발급받은 값입니다.
 
-### 액세스 토큰 발행
+#### 액세스 토큰 발행
 
-액세스 토큰 발행은 다음과 같은 스크립트를 통해 가능합니다.
-
-**issue\_token.sh**
+액세스 토큰은 [인가증명\(Grant\)](../undefined-1/oauth-2.0/grant.md)에서 설명한 4가지 방식을 통해 발급 가능합니다.
 
 ```bash
-#!/bin/bash
+// Authorization code
+$ coinstack-signon token create --type code  --client ${CLIENT_ID} --secret ${CLIENT_SECRET}  --endpoint ${ENDPOINT} --redirect ${REDIRECT_URI} --code ${AUTHORIZATION_CODE}
 
-CLIENT_ID=$1
-CLIENT_SECRET=$2
-AUTH_CODE=$3
-SIGNON_ENDPOINT="localhost:8080"
-REDIR_ENDPOINT="http://localhost:8888"
+// Implicit
+$ coinstack-signon token create --type implicit --user ${USERNAME} --password ${PASSWORD} --client ${CLIENT_ID} --secret ${CLIENT_SECRET}  --endpoint ${ENDPOINT}
 
-RESULT=$(curl -is "$CLIENT_ID:$CLIENT_SECRET@${SIGNON_ENDPOINT}/oauth/token" --data "grant_type=authorization_code&\
-redirect_uri=$REDIR_ENDPOINT&\
-code=${AUTH_CODE}")
+// Resource Owner Password Credentials
+$ coinstack-signon token create --type password --user ${USERNAME} --password ${PASSWORD} --client ${CLIENT_ID} --secret ${CLIENT_SECRET}  --endpoint ${ENDPOINT}
 
-export ACCESS_TOKEN="$(echo "$RESULT" | grep -o '{"access_token":"[^"]*' | grep -o '[^"]*$')"
-export REFRESH_TOKEN="$(echo "$RESULT" | grep -o '"refresh_token":"[^"]*' | grep -o '[^"]*$')"
-
-echo -e "access token : ${ACCESS_TOKEN}\n"
-echo -e "refresh token : ${REFRESH_TOKEN}\n"
+//Client Credentials
+$ coinstack-signon token create --type credentials  --client ${CLIENT_ID} --secret ${CLIENT_SECRET}  --endpoint ${ENDPOINT}
 ```
 
-스크립트를 실행하는 명령어는 다음과 같습니다.
+명령어 실행 후 다음과 같이 출력된다면, 클라이언트 아이디 또는 사용자 정보가 유효하지 않아 발생한 오류입니다.
 
 ```text
-$ ./issue_token.sh ${CLIENT_ID} ${CLIENT_SECRET} ${AUTH_CODE}
+Check your clientId or username, password.
 ```
 
-만약, 다음과 같은 문구가 서버창에 출력된다면 유효하지 않은 인가 코드를 입력하여 오류가 발생한 것 입니다.
+만약, 다음과 같은 문구가 출력된다면 유효하지 않은 인가 코드를 입력하여 발생한 오류입니다.
 
 ```text
-20:59 INFO  o.s.s.o.p.e.TokenEndpoint - Handling error: InvalidGrantException, Invalid authorization code: ${AUTH_CODE}
+The code not found.
 ```
 
-### 액세스 토큰 정보 조회
+만약, Coinstack SignOn 서버가 꺼져있다면 다음과 같은 결과를 확인할 수 있습니다.
+
+```text
+Connection refused. Check server endpoint.
+```
+
+#### 액세스 토큰 정보 조회
 
 발급받은 액세스 토큰에 관한 정보는 다음의 명령어를 통해 확인할 수 있습니다.
 
-```text
+```bash
+// Direct access to the block chain
 $ coinstack-signon token check ${ACCESS_TOKEN}
+
+// Use endpoint
+$ coinstack-signon token check --client ${CLIENT_ID} --secret ${CLIENT_SECRET} --endpoint ${ENDPOINT} ${ACCESS_TOKEN}
 ```
 
 조회가 잘 되면 다음과 같은 결과를 확인할 수 있습니다.
@@ -62,50 +64,55 @@ TokenType                ${TOKEN_TYPE}
 Value                    ${ACCESS_TOKEN_VALUE}
 ```
 
-해당 토큰이 무효한 경우 다음과 같은 결과를 확인할 수 있습니다.
+명령어 실행 후 다음과 같이 출력된다면, 클라이언트 아이디 또는 사용자 정보가 유효하지 않아 발생한 오류입니다.
+
+```text
+Check your clientId or username, password.
+```
+
+만약, 다음과 같은 문구가 출력된다면 유효하지 않은 토큰을를 입력하여 발생한 오류입니다.
 
 ```text
 The token not found.
 ```
 
-## 리프레시 토큰으로 재발행
+만약, Coinstack SignOn 서버가 꺼져있다면 다음과 같은 결과를 확인할 수 있습니다.
 
-발급받은 액세스 토큰과 함께 제공되어지는 리프레시 토큰을 이용하여 만료되거나 만료되기 전인 액세스 토큰을 다음의 명령어를 통해 재발행하실 수 있습니다.
+```text
+Connection refused. Check server endpoint.
+```
 
-**issue\_refresh.sh**
+### 리프레시 토큰으로 재발행
+
+발급받은 액세스 토큰과 함께 제공되어지는 리프레시 토큰을 이용하여 만료되기 전인 액세스 토큰을 다음의 명령어를 통해 재발행할 수 있습니다.
 
 ```bash
-#!/bin/bash
+// Direct access to the block chain
+$ coinstack-signon token refresh --privatekey ${ADMIN_PRIVATEKEY} ${REFRESH_TOKEN}
 
-CLIENT_ID=$1
-CLIENT_SECRET=$2
-REFRESH_TOKEN=$3
-SIGNON_ENDPOINT="localhost:8080"
-
-REFRESH_REQUEST="$(curl -is "$CLIENT_ID:$CLIENT_SECRET@${SIGNON_ENDPOINT}/oauth/token" --data "grant_type=refresh_token&\
-refresh_token=$REFRESH_TOKEN")"
-
-export ACCESS_TOKEN="$(echo "$REFRESH_REQUEST" | grep -o '{"access_token":"[^"]*' | grep -o '[^"]*$')"
-export REFRESH_TOKEN="$(echo "$REFRESH_REQUEST" | grep -o '"refresh_token":"[^"]*' | grep -o '[^"]*$')"
-
-echo -e "Refresh request :\n ${REFRESH_REQUEST}\n"
-echo -e "Access token : ${ACCESS_TOKEN}\n"
-echo -e "Refresh token : ${REFRESH_TOKEN}\n"
+// Use endpoint
+$ coinstack-signon token refresh --client ${CLIENT_ID} --secret ${CLIENT_SECRET} --endpoint ${ENDPOINT} ${REFRESH_TOKEN}
 ```
 
-스크립트를 실행하는 명령어는 다음과 같습니다.
+명령어 실행 후 다음과 같이 출력된다면, 클라이언트 아이디 또는 사용자 정보가 유효하지 않아 발생한 오류입니다.
 
 ```text
-$ ./issue_refresh.sh ${CLIENT_ID} ${CLIENT_SECRET} ${REFRESH_TOKEN}
+Check your clientId or username, password.
 ```
 
-만약, 다음과 같은 오류가 출력된다면 유효하지 않은 리프레시 토큰을 입력하여 오류가 발생한 것 입니다.
+만약, 다음과 같은 문구가 출력된다면 유효하지 않은 토큰을를 입력하여 발생한 오류입니다.
 
 ```text
-21:00 INFO  o.s.s.o.p.e.TokenEndpoint - Handling error: InvalidGrantException, Invalid refresh token: ${REFRESH_TOKEN}
+The token not found.
 ```
 
-### 액세스 토큰 무효화
+만약, Coinstack SignOn 서버가 꺼져있다면 다음과 같은 결과를 확인할 수 있습니다.
+
+```text
+Connection refused. Check server endpoint.
+```
+
+#### 액세스 토큰 무효화
 
 발급받은 토큰을 명시적으로 무효화하는 것은 다음의 명령어를 통해 할 수 있습니다.
 

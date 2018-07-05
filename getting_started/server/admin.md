@@ -60,7 +60,11 @@ $ coinstack-signon server run --profile test
 Coinstack SignOn 서버는 다음의 명령어를 통해 종료 가능합니다.
 
 ```text
+// Gracefully shutdown
 $ coinstack-signon server stop
+
+// Forcely shutdown
+$ coinstack-signon server stop --force
 ```
 
 종료가 잘 되면 하단의 문구가 출력됩니다.
@@ -74,7 +78,11 @@ Server stopped
 Coinstack SignOn 서버는 다음의 명령어를 통해 재실행 가능합니다.
 
 ```text
+// Gracefully server restart
 $ coinstack-signon server restart
+
+// Forcely server restart
+$ coinstack-signon server restart --force
 ```
 
 ### 서버 상태 확인

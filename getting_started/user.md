@@ -36,11 +36,11 @@ EOF
 * 사용자 정보 파일인 ${USER\_INFO\_FILE}을 생성하여 등록할 사용자 정보를 저장합니다.
 
 ```text
-{
+[{
   "username": "${USER_NAME}",
   "password": "${PASSWORD}",
   "authorities": ["${AUTHORITY}", ...]
-}
+}, ...]
 ```
 
 * 사용자 정보 파일을 통해 사용자 정보를 등록합니다.

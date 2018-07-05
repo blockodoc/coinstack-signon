@@ -14,7 +14,7 @@ SignOn에서는 AccessToken과 관련된 모델이 가장 중요하고 빈번하
 >
 > 이 경우, 신분증을 통한 작업의 경우 표를 다시 발행하는 행위인데 이 과정을 좀 더 손쉽게 하기 위한 방법으로리프레쉬 토큰을 제공합니다. 이것은 신분증보다는 구매 번호 또는 예약 번호에 비유할 수 있습니다. 신분 인증없이 액세스 토큰을 재발행할 수 있도록 합니다.
 
-이러한 이유로 액세스 토큰을 발행하기 위해서는 인증 정보와 리프레쉬 토큰을 함께 기록해야 합니다. 
+이러한 이유로 액세스 토큰을 발행하기 위해서는 인증 정보와 리프레쉬 토큰을 함께 기록해야 합니다.
 
 ### Endpoint별 동작
 
@@ -26,16 +26,16 @@ SignOn에서는 AccessToken과 관련된 모델이 가장 중요하고 빈번하
 
 ![](../../.gitbook/assets/token-seq.png)
 
-해당 요청들은 최종적으로 모두 TokenGranter를 통해 token을 발행하도록 요청합니다. 그 과정에서 Authorization code를 발행하거나 사용자의 인가를 받기도 하지만 최좀 목표는 토큰을 발행받는 것이기 때문에 이는 당연합니다.
+해당 요청들은 최종적으로 모두 TokenGranter를 통해 token을 발행하도록 요청합니다. 그 과정에서Authorization code를 발행하거나 사용자의 인가를 받기도 하지만 최좀 목표는 토큰을 발행받는 것이기 때문에 이는 당연합니다.
 
 ### TokenGranter
 
 ![](../../.gitbook/assets/tokengranter-model.png)
 
-TokenGranter를 구현한 클래스들입니다. 이 클래스에서 사용하는 인터페이스와 그 구현체는 다음과 같습니다.
+TokenGranter를 구현한 클래스들입니다. 이 클래스에서 사용하는 인터페이스와 그 구현체는 다음과 같습니다.
 
-| 인터페이스 | 제공되는 구현체 |
-| ------- | ----------- |
+| 인터페이스 | 제공되는 구현체 |
+| --- | --- | --- | --- |
 | AuthorizationServerTokenServices | coinstack.signon.server.service.CoinstackTokenService |
 | ClientDetailsService | coinstack.signon.server.service.CoinstackClientService |
 | AuthorizationCodeServices | coinstack.signon.server.service.CoinstackAuthorizationCodeService |
