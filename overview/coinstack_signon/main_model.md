@@ -32,9 +32,9 @@ SignOn에서는 AccessToken과 관련된 모델이 가장 중요하고 빈번하
 
 ![](../../.gitbook/assets/tokengranter-model.png)
 
-TokenGranter를 구현한 클래스들입니다. 이 클래스에서 사용하는 인터페이스와 그 구현체는 다음과 같습니다.
+TokenGranter를 구현한 클래스들입니다. 이 클래스에서 사용하는 인터페이스와 그 구현체는 다음과 같습니다.
 
-| 인터페이스 | 제공되는 구현체 |
+| 인터페이스 | 제공되는 구현체 |
 | ------- | ----------- |
 | AuthorizationServerTokenServices | coinstack.signon.server.service.CoinstackTokenService |
 | ClientDetailsService | coinstack.signon.server.service.CoinstackClientService |
