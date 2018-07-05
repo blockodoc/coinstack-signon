@@ -6,7 +6,7 @@ SignOn에서는 AccessToken과 관련된 모델이 가장 중요하고 빈번하
 
 관련 모델은 다음과 같습니다.
 
-![](../../.gitbook/assets/main-model.png)
+![](https://github.com/blockodoc/coinstack-signon/blob/master/.gitbook/assets/main-model.png)
 
 이 모델을 이해하기 위해서 현실에서 일어나는 일을 예로 들어보겠습니다.
 
@@ -20,17 +20,17 @@ SignOn에서는 AccessToken과 관련된 모델이 가장 중요하고 빈번하
 
 #### AuthorizationEndpoint
 
-![](../../.gitbook/assets/authorization-seq.png)
+![](https://github.com/blockodoc/coinstack-signon/blob/master/.gitbook/assets/authorization-seq.png)
 
 #### TokenEndpoint
 
-![](../../.gitbook/assets/token-seq.png)
+![](https://github.com/blockodoc/coinstack-signon/blob/master/.gitbook/assets/token-seq.png)
 
 해당 요청들은 최종적으로 모두 TokenGranter를 통해 token을 발행하도록 요청합니다. 그 과정에서Authorization code를 발행하거나 사용자의 인가를 받기도 하지만 최좀 목표는 토큰을 발행받는 것이기 때문에 이는 당연합니다.
 
 ### TokenGranter
 
-![](../../.gitbook/assets/tokengranter-model.png)
+![](https://github.com/blockodoc/coinstack-signon/blob/master/.gitbook/assets/tokengranter-model.png)
 
 TokenGranter를 구현한 클래스들입니다. 이 클래스에서 사용하는 인터페이스와 그 구현체는 다음과 같습니다.
 
