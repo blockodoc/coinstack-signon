@@ -5,6 +5,8 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
+        mv .gitbook/assets gitbook-assets
+        find . -type f -name '*.md' -exec sed -i 's/\.gitbook\/assets/gitbook-assets/g' {} +
 	gitbook install && gitbook build
 	gitbook pdf ./ ./_book/${BOOK}.pdf
 }
