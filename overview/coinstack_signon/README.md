@@ -8,7 +8,7 @@ Coinstack SignOn 서버는 Spring Boot 2.0기반으로 구현되어 있습니다
 
 ![](../../.gitbook/assets/server-architecture.png)
 
-![](../../.gitbook/assets/test.png)
+![](../../images/test.png)
 
 ## 인증 및 확인 절차
 
