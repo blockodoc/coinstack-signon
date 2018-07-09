@@ -32,7 +32,7 @@ $ coinstack-signon code check ${AUTHORIZATION_CODE}
 
 조회가 잘 되면 다음과 같은 결과를 확인할 수 있습니다.
 
-```text
+```bash
 Authentication
         AccessTokenValue        
         Authorities               ${AUTHORITY}

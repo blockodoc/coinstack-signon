@@ -18,7 +18,7 @@ OAuth 2.0 서비스를 사용하기 위해서는 사용자를 등록해야 합�
 
 사용자 입력을 통한 사용자 등록은 다음과 같은 명령으로 가능합니다.
 
-```text
+```bash
 $ coinstack-signon user create \
     --privatekey ${ADMIN_PRIVATEKEY} <<EOF
 {
@@ -35,7 +35,7 @@ EOF
 
 * 사용자 정보 파일인 ${USER\_INFO\_FILE}을 생성하여 등록할 사용자 정보를 저장합니다.
 
-```text
+```bash
 [{
   "username": "${USER_NAME}",
   "password": "${PASSWORD}",
@@ -45,7 +45,7 @@ EOF
 
 * 사용자 정보 파일을 통해 사용자 정보를 등록합니다.
 
-```text
+```bash
 $ coinstack-signon user create \
     --privatekey ${ADMIN_PRIVATEKEY} \
     --file ${USER_INFO_FILE}
@@ -63,13 +63,13 @@ $ coinstack-signon user create \
 
 등록된 사용자는 다음 명령을 통해 확인할 수 있습니다.
 
-```text
+```bash
 $ coinstack-signon user check ${USER_NAME}
 ```
 
 조회가 완료되면 아래와 같은 문구가 나옵니다.
 
-```text
+```bash
 Authorities               ${AUTHORITY}
                           .
                           .
@@ -98,7 +98,7 @@ The user not found.
 
 **사용자 입력으로 로그 확인**
 
-```text
+```bash
 $ coinstack-signon user create \
     --log trace \
     --privatekey ${ADMIN_PRIVATEKEY} <<EOF
@@ -111,7 +111,7 @@ $ coinstack-signon user create \
 
 **파일로부터 로그 확인**
 
-```text
+```bash
 $ cat ${USER_INFO_FILE} | \
   coinstack-signon user create \
     --log trace \
@@ -128,7 +128,7 @@ Coinstack Node의 마이닝 주기와 같은 설정 때문에 즉각적으로 �
 
 사용자를 삭제하기 위한 명령은 다음과 같습니다.
 
-```text
+```bash
 $ coinstack-signon user remove \
     --privatekey ${ADMIN_PRIVATEKEY} \
     ${USER_NAME}

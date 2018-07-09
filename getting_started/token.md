@@ -16,7 +16,7 @@ $ coinstack-signon token create --type implicit --user ${USERNAME} --password ${
 // Resource Owner Password Credentials
 $ coinstack-signon token create --type password --user ${USERNAME} --password ${PASSWORD} --client ${CLIENT_ID} --secret ${CLIENT_SECRET}  --endpoint ${ENDPOINT}
 
-//Client Credentials
+// Client Credentials
 $ coinstack-signon token create --type credentials  --client ${CLIENT_ID} --secret ${CLIENT_SECRET}  --endpoint ${ENDPOINT}
 ```
 
@@ -52,7 +52,7 @@ $ coinstack-signon token check --client ${CLIENT_ID} --secret ${CLIENT_SECRET} -
 
 조회가 잘 되면 다음과 같은 결과를 확인할 수 있습니다.
 
-```text
+```bash
 AdditionalInformation    {${ADDITIONAL_INFO_KEY}=${ADDITIONAL_INFO_VALUE}}
 Expiration               ${DATE}
 RefreshToken             ${REFRESH_TOKEN_VALUE}
@@ -116,7 +116,7 @@ Connection refused. Check server endpoint.
 
 발급받은 토큰을 명시적으로 무효화하는 것은 다음의 명령어를 통해 할 수 있습니다.
 
-```text
+```bash
 $ coinstack-signon token remove \
     --privatekey ${ADMIN_PRIVATEKEY} \
     ${ACCESS_TOKEN}

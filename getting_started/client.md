@@ -16,7 +16,7 @@ OAuth 2.0 서비스를 사용하기 위해서는 클라이언트를 등록해야
 
 사용자 입력을 통한 클라이언트 등록은 다음과 같은 명령으로 가능합니다.
 
-```text
+```bash
 $ coinstack-signon client create \
     --privatekey ${ADMIN_PRIVATEKEY} <<EOF
 {
@@ -42,7 +42,7 @@ EOF
 
 * 클라이언트 정보 파일인 ${CLIENT\_INFO\_FILE}을 생성하여 등록할 클라이언트 정보를 저장합니다.
 
-```text
+```bash
 [{
   "clientId": "${CLIENT_ID}",
   "clientSecret": "${CLIENT_SECRET}",
@@ -61,7 +61,7 @@ EOF
 
 * 클라이언트 정보 파일을 통해 클라이언트 정보를 등록합니다.
 
-```text
+```bash
 $ coinstack-signon client create \
     --privatekey ${ADMIN_PRIVATEKEY} \
     --file ${CLIENT_INFO_FILE}
@@ -90,13 +90,13 @@ $ coinstack-signon client create \
 
 #### 클라이언트 단일 조회
 
-```text
+```bash
 $ coinstack-signon client check ${CLIENT_ID}
 ```
 
 조회가 완료되면 아래와 같은 문구가 나옵니다.
 
-```text
+```bash
 AccessTokenValidity       ${ACCESS_TOKEN_VALIDITY}
 AdditionalInformation     {${ADDITIONAL_INFO_KEY}=${ADDITIONAL_INFO_VALUE}}
 Authorities               ${AUTHORITY}
@@ -133,7 +133,7 @@ Scopes                    ${SCOPE}
 
 조회할 수 없는 클라이언트를 확인했다면 아래와 같은 문구가 나옵니다.
 
-```text
+```bash
 The client not found.
 ```
 
@@ -141,14 +141,14 @@ The client not found.
 
 등록된 클라이언트 목록은 다음 명령을 통해 확인할 수 있습니다.
 
-```text
+```bash
 $ coinstack-signon client list \
     --privatekey ${ADMIN_PRIVATEKEY}
 ```
 
 조회가 완료되면 다음과 같은 문구가 나옵니다.
 
-```text
+```bash
 Client ID            Description
 ${CLIENT_ID}         ${DESCRIPTION}
 .                    .
@@ -170,7 +170,7 @@ ${CLIENT_ID}         ${DESCRIPTION}
 
 **사용자 입력으로 로그 확인**
 
-```text
+```bash
 $ coinstack-signon client create \
     --log trace \
     --privatekey ${ADMIN_PRIVATEKEY} <<EOF
@@ -192,7 +192,7 @@ $ coinstack-signon client create \
 
 **파일로부터 로그 확인**
 
-```text
+```bash
 $ cat ${CLIENT_INFO_FILE} | \
   coinstack-signon client create \
     --log trace \
@@ -209,7 +209,7 @@ Coinstack Node의 마이닝 주기와 같은 설정 때문에 즉각적으로 �
 
 클라이언트를 삭제하기 위한 명령은 다음과 같습니다.
 
-```text
+```bash
 $ coinstack-signon client remove \
     --privatekey ${ADMIN_PRIVATEKEY} \
     ${CLIENT_ID}
