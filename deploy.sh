@@ -5,7 +5,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-	gitbook install && gitbook build
+	gitbook init && gitbook build
 	gitbook pdf ./ ./_book/${BOOK}.pdf
 }
 
