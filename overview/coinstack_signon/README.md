@@ -54,7 +54,7 @@ Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드�
 | /oauth/token | 액세스 토큰을 발급해주는 엔드포인트 |  |
 | /oauth/check\_token | 액세스 토큰을 확인해주는 엔드포인트 |  |
 | /oauth/logout | 로그아웃해주는 엔드포인트 |  |
-| /oauth/error | 에러 발생 내용을 보여주는 엔드포인트 |  |
+| /oauth/error | 에러 발생 내용을 보여주는 엔드포인트 | &nbsp; |
 
 ### **/oauth/authorize**
 
@@ -64,12 +64,12 @@ Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드�
 
 | Parameter | Description | Values |
 | --- | --- | --- |
-| response\_type | 사용할 권한 부여 처리 과정을 결정   Authorization Code, Implicit 방식에서 사용 | String   · code   · token |
-| grant\_type | 인가 증명 방식을 결정하기 위해 사용 | String   · authorization\_code   · implicit   · password   · client\_credentials |
+| response\_type | 사용할 권한 부여 처리 과정을 결정<br> Authorization Code, Implicit 방식에서 사용 | String<br>   · code<br>   · token |
+| grant\_type | 인가 증명 방식을 결정하기 위해 사용 | String<br> · authorization\_code<br>   · implicit<br>   · password<br>   · client\_credentials |
 | scope | 클라이언트에서 사용자에게 허가를 요구하는 범위 |  |
 | client\_id | 클라이언트 식별자 |  |
 | secret | 클라이언트 비밀번호 |  |
-| redirect\_uri | SignOn 서버에서 인증/인가 후 반환되는 URI |  |
+| redirect\_uri | SignOn 서버에서 인증/인가 후 반환되는 URI | &nbsp; |
 
 #### **Response**
 
@@ -88,12 +88,12 @@ Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드�
 
 | Parameter | Description | Values |
 | --- | --- | --- |
-| grant\_type | 인가 증명 방식을 결정하기 위해 사용 | String   · authorization\_code   · password   · client\_credentials   · refresh\_token |
+| grant\_type | 인가 증명 방식을 결정하기 위해 사용 | String<br>   · authorization\_code<br>   · password<br>   · client\_credentials<br>   · refresh\_token |
 | redirect\_uri | SignOn 서버에서 인증/인가 후 반환되는 URI |  |
 | code | 인가 증명 방식이 Authorization Code 방식일 경우 사용 |  |
 | username | 인가 증명 방식이 Password 방식일 경우 사용 |  |
 | password | 인가 증명 방식이 Password 방식일 경우 사용 |  |
-| refresh\_token | 인가 증명 방식이 Refresh Token 방식일 경우 사용 |  |
+| refresh\_token | 인가 증명 방식이 Refresh Token 방식일 경우 사용 | &nbsp; |
 
 #### **Response**
 
@@ -102,8 +102,8 @@ Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드�
 | access\_token | 액세스 토큰값 |  |
 | refresh\_token | 리프레시 토큰값 |  |
 | scope | 클라이언트에서 사용자에게 허가를 요구하는 범위 |  |
-| token\_type | 액세스 토큰의 타입 | String   · bearer |
-| expires\_in | 액세스 토큰 만료 시간 |  |
+| token\_type | 액세스 토큰의 타입 | String<br> · bearer |
+| expires\_in | 액세스 토큰 만료 시간 | &nbsp; |
 
 ### **/oauth/check\_token**
 
@@ -113,7 +113,7 @@ Coinstack SignOn 서버에서 제공하는 OAuth 2.0 인증 서비스의 엔드�
 
 | Parameter | Description | Values |
 | --- | --- | --- |
-| token | 확인할 액세스 토큰값 |  |
+| token | 확인할 액세스 토큰값 | &nbsp; |
 
 #### **Response**
 
@@ -135,7 +135,7 @@ access\_token, redirect\_uri 인자는 필수적이며 로그아웃이 완료되
 | Parameter | Description | Values |
 | --- | --- | --- |
 | access\_token | 만료할 액세스 토큰값 |  |
-| redirect\_uri | 사용 중인 redirect\_uri |  |
+| redirect\_uri | 사용 중인 redirect\_uri | &nbsp; |
 
 ### **/oauth/confirm\_access**
 
