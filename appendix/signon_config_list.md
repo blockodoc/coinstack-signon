@@ -11,5 +11,5 @@
 | signon.server.privatekeys | 서버가 사용하는 개인키들 | 필수 | L2CMbG8JqaAQpJDTgrmoeVq7fcpKnycCd9rQg5vCNBTxZFXNQC4T<br>KwacZMHwTX1p7VJ8mbc1KBnzQ7fyktA6SfoduogsErfihdwu1CTK |
 | signon.server.token.validity | 토큰의 유효시간<br>단위는 초 |  | 600 |
 | signon.server.user-repository | 사용자 정보에 접근하는<br>구현체의 클래스명 |  | coinstack.signon.repository.SimpleUserRepository |
-| signon.peer.addresses | 다른 서버의 어드레스 |  |  |
+| signon.peer.addresses | 다른 서버의 어드레스 |  | &nbsp; |
 
