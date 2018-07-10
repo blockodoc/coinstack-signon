@@ -8,11 +8,11 @@ Maven 저장소를 통해 받은 coinstack-signon-user.jar 파일 안에는 사�
 
 해당 프로젝트를 선택하고 메뉴에서 File &gt; New 그리고 Other..을 선택합니다. 그 후, 새 창이 나오면 목록에서Java Class를 선택합니다.
 
-![](../../.gitbook/assets/user-repository-class1.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_create_class1.png)
 
 사용자 인증 정보 저장소로 사용할 클래스의 이름을 입력하고,coinstack.signon.repository.UserDetailsRepository를 인터페이스로 추가합니다.
 
-![](../../.gitbook/assets/user-repository-class2%20%281%29.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_create_class2.png)
 
 ### UserDetailsRepository를 이용한 사용자 인증 정보 저장소 구현
 

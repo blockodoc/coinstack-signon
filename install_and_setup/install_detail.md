@@ -2,11 +2,13 @@
 
 정상적으로 설치됐다면 다음과 같은 메시지와 함께, coinstack-signon-${VERSION}의 형태의 디렉터리가 생성된것을 확인할 수 있습니다.
 
-![](../.gitbook/assets/install-success%20%281%29.png)
+![](../.gitbook/assets/install_and_setup/install_success.png)
 
 ## 설치 디렉터리
 
 설치 디렉터리 목록은 다음과 같습니다.
+
+![](../.gitbook/assets/install_and_setup/install_directory.png)
 
 coinstack.yaml 파일은 설치 후에는 존재하지 않으나, 서버 설정에서 생성합니다.
 

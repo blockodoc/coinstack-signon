@@ -92,7 +92,7 @@ $ mvn spring-boot:run -Dspring.profiles.active=development
 
 SSO에서 필터의 흐름과 이에 따른 코드는 다음과 같습니다.
 
-![](../../.gitbook/assets/servlet-filter-flow.png)
+![](../../.gitbook/assets/utilization/single_sign_on/servlet_filter_flow.png)
 
 ### SSOFilter.java
 
@@ -408,7 +408,7 @@ private String sendPost(String uri, String params, String clientInfo) throws Exc
 
 테스트를 위해 다음과 같이 프로젝트를 복사합니다.
 
-![](../../.gitbook/assets/sso-copy-project.png)
+![](../../.gitbook/assets/utilization/single_sign_on/resource_copy_project.png)
 
 ### Servlet
 
@@ -452,17 +452,17 @@ $ mvn spring-boot:run -Dspring.profiles.active=development
 
 localhost:8888/main\_page.jsp로 접속하면 SignOn 서버의 로그인 페이지로 리다이렉션됩니다.
 
-![](../../.gitbook/assets/oauth-login%20%281%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/resource_oauth_login.png)
 
 이후, 등록한 사용자 인증 정보로 다음과 같이 로그인을 합니다.
 
-![](../../.gitbook/assets/sso-user-login%20%283%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/resource_user_login.png)
 
 로그인이 성공하면 localhost:8888/main\_page.jsp로 리다이렉션되는 것을 확인할 수 있습니다.
 
-![](../../.gitbook/assets/sso-main-page1%20%283%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/resource_main_page1.png)
 
 이후, localhost:8889/main\_page.jsp로 접속하면 별도의 인증 절차 없이 메인 페이지를 확인할 수 있습니다.
 
-![](../../.gitbook/assets/sso-main-page2%20%281%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/resource_main_page2.png)
 

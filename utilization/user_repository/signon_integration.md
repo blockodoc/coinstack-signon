@@ -34,19 +34,19 @@ signon:
 
 설정에 의해 로그인 페이지로 리다이렉트되면서 다음과 같은 화면을 볼 수 있습니다.
 
-![](../../.gitbook/assets/login-form-empty.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_oauth_login.png)
 
 **User**와 **Password**에 [사용자](../../getting_started/user.md)에서 등록한 사용자를 입력합니다. 해당 사용자와 패스워드는 기본 모듈의 사용자 정보 저장소에 등록된 사용자 정보입니다. 즉, 새로운 모듈을 적용하였으므로, 다음과 같이 로그인에 실패해야 합니다.
 
-![](../../.gitbook/assets/login-form-error%20%281%29.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_oauth_login_error.png)
 
 이제 다시 새로 만든 모듈의 사용자 정보로 로그인을 시도합니다.
 
 **User**에 , **Password**에 를 입력하면 다음과 같은 페이지를 볼 수 있습니다.
 
-![](../../.gitbook/assets/welcome-page.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_welcome_page.png)
 
 만일 다음과 같은 페이지를 보게 된다면, URL이 올바르지 않은 경우입니다. 하지만, 인증을 통과한 것이기 때문에 올바르게 테스트한 것입니다. 아래 이미지는 [http://${SERVER\_HOSTNAME}:${SERVER\_PORT}/](http://${SERVER_HOSTNAME}:${SERVER_PORT}/)로 접근한 경우 보여지는 페이지 입니다.
 
-![](../../.gitbook/assets/page-not-found.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_page_not_found.png)
 

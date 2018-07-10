@@ -6,19 +6,19 @@ Coinstack SignOn은 블록체인 기반의 사인-온\(Blockchain-based Sign On\
 
 Coinstack SignOn 서버는 Spring Boot 2.0기반으로 구현되어 있습니다. Spring Security OAuth2의 엔드포인트와 서비스들을 활용하고 있습니다.
 
-![](../../.gitbook/assets/server-architecture.png)
+![](../../.gitbook/assets/overview/coinstack_signon/server_architecture.png)
 
 ## 인증 및 확인 절차
 
 다음은 Coinstack SignOn의 인증 및 확인 절차입니다.
 
-![](../../.gitbook/assets/authentication-process.png)
+![](../../.gitbook/assets/overview/coinstack_signon/authentication_process.png)
 
 ## 관리자 어드레스
 
 관리자 어드레스는 클라이언트\(Client\), 사용자\(User\)를 관리하는 어드레스입니다.
 
-![](../../.gitbook/assets/admin-address-transaction-form.png)
+![](../../.gitbook/assets/overview/coinstack_signon/admin_address_transaction_form.png)
 
 ※ 마이닝 어드레스를 사용하는 경우 UTXO가 많이 발생하여 부하가 생길 수 있습니다.
 
@@ -42,7 +42,7 @@ Coinstack SignOn 서버는 Spring Boot 2.0기반으로 구현되어 있습니다
 
 여러 Coinstack SignOn로 구성된 시스템이라면, 하나의 서버가 발행한 액세스 토큰을 다른 서버에서도 인지할 수있어야 합니다. 따라서, 서버별로 개인키들을 따로 지정하는 것과 동시에 이러한 개인키의 주소들을 모두 알고 있어야합니다.
 
-![](../../.gitbook/assets/distributed-network.png)
+![](../../.gitbook/assets/overview/coinstack_signon/distributed_network.png)
 
 ## E**ndpoint**
 

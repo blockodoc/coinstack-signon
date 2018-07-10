@@ -14,7 +14,7 @@ $ coinstack-signon help
 
 명령어를 입력하면 다음과 같은 화면이 출력되며, 실행 가능한 명령어 목록들을 확인할 수 있습니다.
 
-![](../.gitbook/assets/help.png)
+![](../.gitbook/assets/getting_started/help.png)
 
 ### 상세 도움말
 

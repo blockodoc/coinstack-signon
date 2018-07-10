@@ -117,7 +117,7 @@ README.TXT      content         index.html      jmeter.log      result.csv      
 
 index.html을 브라우저로 열면 다음과 같은 화면을 확인할 수 있습니다.
 
-![](../../.gitbook/assets/load-test-dashboard.png)
+![](../../.gitbook/assets/appendix/test/load_test_dashboard.png)
 
 성능 측정의 대표적인 지표인 TPS는 Response Times의 Throughput으로 확인하실 수 있습니다.
 

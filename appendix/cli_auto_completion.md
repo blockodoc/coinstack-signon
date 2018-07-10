@@ -42,5 +42,5 @@ $ coinstack-signon [tab]
 
 아래와 같이 수행할 수 있는 명령들을 보여줍니다.
 
-![](../.gitbook/assets/bash-completion.png)
+![](../.gitbook/assets/appendix/bash_completion.png)
 

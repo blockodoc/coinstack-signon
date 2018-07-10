@@ -2,7 +2,7 @@
 
 SSO 시스템 구성도는 다음과 같습니다.
 
-![](../../.gitbook/assets/sso-architecture%20%281%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_architecture.png)
 
 A. Client는 Resource server A에 접속하기 위해 Page URI를 전송합니다.
 

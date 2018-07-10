@@ -136,5 +136,5 @@ Login 경로는 **2가지**의 처리를 담당합니다.
 
 ※ Nginx 설정 변경 후 반드시 Nginx를 **재시작**해야 변경 결과가 적용되며, 관련 명령어는 [환경 구성](undefined.md)을 참조하시기 바랍니다.
 
-![](../../.gitbook/assets/custom-login-page.png)
+![](../../.gitbook/assets/utilization/custom_login/custom_login_page.png)
 

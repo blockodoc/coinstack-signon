@@ -117,7 +117,7 @@ SSO 서블릿 필터 코드와 관련된 설명, 설정은 [Servlet 기반의 �
 
 권한 제어에서 필터의 흐름과 이에 따른 코드는 다음과 같습니다.
 
-![](../../.gitbook/assets/authorization-control-servlet-filter-flow.png)
+![](../../.gitbook/assets/utilization/single_sign_on/authorization_control_servlet_filter_flow.png)
 
 #### SSOFilter.java
 
@@ -286,17 +286,17 @@ String 형태의 Authorities를 정규 표현식으로 정돈하여 String 배�
 
 [localhost:8888/user\_page.jsp](localhost:8888/user_page.jsp)로 접속하면 SignOn 서버에서 권한을 체크하고 로그인 페이지로 리다이렉션합니다.
 
-![](../../.gitbook/assets/oauth-login.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_oauth_login.png)
 
 이후 관리자 계정인 admin과 일반 사용자 계정인 user로 각각 로그인합니다.
 
-![](../../.gitbook/assets/sso-admin-login.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_admin_login1.png)
 
-![](../../.gitbook/assets/sso-user-login.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_user_login1.png)
 
 이처럼 user\_page.jsp는 모든 사용자가 접근할 수 있습니다.
 
-![](../../.gitbook/assets/sso-user-page%20%281%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_user_page.png)
 
 #### 관리자 페이지
 
@@ -304,17 +304,17 @@ String 형태의 Authorities를 정규 표현식으로 정돈하여 String 배�
 
 이후 admin\_page.jsp의 접근 권한이 없는 user로 로그인합니다.
 
-![](../../.gitbook/assets/sso-user-login%20%284%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_user_login2.png)
 
 user는 admin\_page.jsp의 접근 권한을 갖고 있지 않기 때문에 403\_page.jsp로 리다이렉션합니다.
 
-![](../../.gitbook/assets/sso-403-page.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_403_page.png)
 
 admin\_page.jsp의 접근 권한을 가진 admin으로 로그인합니다.
 
-![](../../.gitbook/assets/sso-admin-login%20%281%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_admin_login2.png)
 
 admin은 admin\_page.jsp의 접근 권한을 갖고 있기 때문에 해당 페이지로 리다이렉션합니다.
 
-![](../../.gitbook/assets/sso-admin-page1.png)
+![](../../.gitbook/assets/utilization/single_sign_on/sso_admin_page1.png)
 

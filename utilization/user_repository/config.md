@@ -6,15 +6,15 @@
 
 메뉴에서 File -&gt; New를 선택하고, 리스트에서 **Maven Project**를 선택하고 다음으로 진행합니다.
 
-![](../../.gitbook/assets/create-maven-project-in-eclipse1.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_create_maven_project_in_eclipse1.png)
 
 **Create a simple project**를 체크하고, 다음 단계로 진행합니다.
 
-![](../../.gitbook/assets/create-maven-project-in-eclipse2.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_create_maven_project_in_eclipse2.png)
 
 &lt;group-id&gt;와 &lt;artifact-id&gt;를 입력하고, 과정을 종료하면 프로젝트가 생성됩니다.
 
-![](../../.gitbook/assets/create-maven-project-in-eclipse3%20%281%29.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_set_project_name.png)
 
 ### pom.xml 설정하기
 
@@ -64,7 +64,7 @@ pom.xml에서는 라이브러리를 가져오기 위해서 Maven 저장소 정�
 
 **pom.xml**에 정의한 라이브러리들을 Maven 저장소로부터 가져오려면 해당 프로젝트를 우클릭 -&gt; Maven -&gt; Update Project...를 선택합니다.
 
-![](../../.gitbook/assets/user-repository-maven-update%20%281%29.png)
+![](../../.gitbook/assets/utilization/user_repository/repo_project_update.png)
 
 선택을 완료하면, Maven 저장소로부터 자동적으로 로컬 저장소로 라이브러리들이 다운로드되어집니다.
 

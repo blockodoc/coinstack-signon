@@ -42,7 +42,7 @@ OAuth 절차상에서 접근하려 하는 대상 자원. 웹상의 페이지, �
 
 OAuth 2.0 인증 서비스의 흐름은 다음과 같습니다.
 
-![](../../.gitbook/assets/abstract-protocol-flow.png)
+![](../../.gitbook/assets/overview/oauth_2.0/abstract_protocol_flow.png)
 
 A. 클라이언트는 리소스 오너에게 제한된 리소스의 접근 허가를 요청합니다.
 

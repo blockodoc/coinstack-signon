@@ -6,9 +6,9 @@ Coinstack SignOn 서버는 직접 컴퓨터에 설치하여 구동할 수 있는
 
 Coinstack SignOn 서버는 다음 화면처럼 native, docker 값으로 구동 모드를 설정할 수 있습니다. 기본 설정은 **Native 모드**입니다.
 
-![](../../.gitbook/assets/server-mode1.png)
+![](../../.gitbook/assets/getting_started/server/server_mode1.png)
 
-![](../../.gitbook/assets/server-mode2.png)
+![](../../.gitbook/assets/getting_started/server/server_mode2.png)
 
 ### 서버 실행
 
@@ -133,11 +133,11 @@ No process detected
 
 이와 같이 화면이 출력되는 이유는 OAuth 2.0 서비스를 이용하지 않았기 때문입니다.
 
-![](../../.gitbook/assets/initial-server-status.png)
+![](../../.gitbook/assets/getting_started/server/initial_server_status.png)
 
 따라서 [기능 테스트](../../appendix/test/function.md), [부하 테스트](../../appendix/test/load.md) 등의 OAuth 2.0 서비스를 이용하면, 다음과 같이 서버 현황을 확인할 수 있습니다.
 
-![](../../.gitbook/assets/server-status.png)
+![](../../.gitbook/assets/getting_started/server/server_status.png)
 
 확인할 수 있는 리소스의 종류는 다음과 같습니다.
 

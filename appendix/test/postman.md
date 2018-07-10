@@ -10,29 +10,29 @@ Postman의 Authorization TYPE을 OAuth 2.0으로 다음 화면처럼 설정한 �
 
 액세스 토큰을 발급받기 위해 Get New Access Token 버튼을 클릭합니다.
 
-![](../../.gitbook/assets/postman-test1.png)
+![](../../.gitbook/assets/appendix/test/postman_test1.png)
 
 ### 액세스 토큰 발급
 
 액세스 토큰을 발급받기 위해 등록된 클라이언트 정보에 따라 양식을 다음 화면처럼 설정한 뒤, Request Token 버튼을 클릭합니다
 
-![](../../.gitbook/assets/postman-test2%20%281%29.png)
+![](../../.gitbook/assets/appendix/test/postman_test2.png)
 
 Request Token 버튼을 통해 Token을 요청하면 로그인 페이지로 리다이렉트됩니다.
 
-![](../../.gitbook/assets/postman-test3.png)
+![](../../.gitbook/assets/appendix/test/postman_test3.png)
 
 이후 등록된 사용자의 ID/Password로 로그인, 사용자 허가의 과정을 수행합니다.
 
-![](../../.gitbook/assets/postman-test4.png)
+![](../../.gitbook/assets/appendix/test/postman_test4.png)
 
 이후 다음 화면처럼 액세스 토큰에 대한 정보를 확인할 수 있습니다.
 
-![](../../.gitbook/assets/postman-test5.png)
+![](../../.gitbook/assets/appendix/test/postman_test5.png)
 
 액세스 토큰의 유효성 검사를 위해 Use Token 버튼을 클릭합니다.
 
-![](../../.gitbook/assets/postman-test6.png)
+![](../../.gitbook/assets/appendix/test/postman_test6.png)
 
 ### 액세스 토큰 유효성 검사
 
@@ -121,15 +121,15 @@ echo -n '${CLIENT_ID}:${CLIENT_SECRET}' | base64
 echo -n '${ENCODED_TEXT}' | base64 -d | xargs
 ```
 
-![](../../.gitbook/assets/postman-test7.png)
+![](../../.gitbook/assets/appendix/test/postman_test7.png)
 
 Body 탭에서 x-www-form-urlencoded를 데이터 타입으로 지정한 후, 다음과 같이 입력합니다.
 
 token의 value에 입력한 값은 발급받은 액세스 토큰 값입니다. Send 버튼을 클릭합니다.
 
-![](../../.gitbook/assets/postman-test8%20%281%29.png)
+![](../../.gitbook/assets/appendix/test/postman_test8.png)
 
 이후 다음과 같이 액세스 토큰의 유효성을 확인할 수 있습니다.
 
-![](../../.gitbook/assets/postman-test9.png)
+![](../../.gitbook/assets/appendix/test/postman_test9.png)
 

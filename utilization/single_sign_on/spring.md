@@ -12,15 +12,15 @@
 
 먼저 메뉴에서 File -&gt; New를 선택하고, 리스트에서 **Maven Project**를 선택하고 다음으로 진행합니다.
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/spring_create_maven_project_in_eclipse1.png)
 
 **Create a simple project**를 체크하고, 다음 단계로 진행합니다.
 
-![](../../.gitbook/assets/image.png)
+![](../../.gitbook/assets/utilization/single_sign_on/spring_create_maven_project_in_eclipse2.png)
 
 &lt;group-id&gt;와 &lt;artifact-id&gt;를 입력하고, 과정을 종료하면 프로젝트가 생성됩니다.
 
-![](../../.gitbook/assets/set_project_name%20%284%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/spring_set_project_name.png)
 
 ### pom.xml 설정하기
 
@@ -118,7 +118,7 @@ spring:
 
 **pom.xml**에 정의한 라이브러리들을 Maven 저장소로부터 가져오려면 해당 프로젝트를 우클릭 -&gt; Maven -&gt; Update Project...를 선택합니다.
 
-![](../../.gitbook/assets/project_update%20%282%29.png)
+![](../../.gitbook/assets/utilization/single_sign_on/spring_project_update.png)
 
 선택을 완료하면, Maven 저장소로부터 자동적으로 로컬 저장소로 라이브러리들이 다운로드되어집니다.
 
