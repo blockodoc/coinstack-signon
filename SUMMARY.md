@@ -42,7 +42,7 @@
     * [권한 제어](utilization/single_sign_on/auth_control.md)
     * [시스템 구성](utilization/single_sign_on/system_architecture.md)
   * [사용자 정의 로그인 페이지](utilization/custom_login/README.md)
-    * [환경 구성](utilization/custom_login/undefined.md)
+    * [환경 구성](utilization/custom_login/nginx_install.md)
     * [Nginx 설정](utilization/custom_login/nginx_config.md)
 * [Appendix](appendix/README.md)
   * [오픈 소스 라이센스](appendix/open_license.md)
