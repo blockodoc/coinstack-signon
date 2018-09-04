@@ -128,8 +128,8 @@ Controller에서 각각 URI로 들어온 내용들을 jsp 페이지로 연결해
 
 ```java
 @Controller
-@SpringBootApplicationpublic
-class WebApplication {
+@SpringBootApplication
+public class WebApplication {
   @RequestMapping("/main_page")
   public String mainPage(){ 
     return "main_page"; 
