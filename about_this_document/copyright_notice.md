@@ -18,7 +18,7 @@ This document is for information purposes only. The company assumes no direct or
 
 ## Trademarks
 
-Coinstack is registered trademark of BLOCKO, Inc. Other products, titles or services may be registered trademarks of their respective companies
+Coinstack is registered trademark of BLOCKO, Inc. Other products, titles or services may be registered trademarks of their respective companies.
 
 Coinstack은 BLOCKO, Inc의 등록 상표입니다. 기타 제품들과 이름 및 서비스는 각 회사에 귀속되어 있습니다.
 
