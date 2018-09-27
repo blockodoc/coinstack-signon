@@ -1,0 +1,1062 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>인가 증명(Grant) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../coinstack.html" />
+    
+    
+    <link rel="prev" href="client.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Coinstack SignOn 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../about_this_document/">
+            
+                <a href="../../about_this_document/">
+            
+                    
+                    본 문서에 관하여
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../about_this_document/precondition.html">
+            
+                <a href="../../about_this_document/precondition.html">
+            
+                    
+                    전제 조건
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../about_this_document/document_info.html">
+            
+                <a href="../../about_this_document/document_info.html">
+            
+                    
+                    문서 정보
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../about_this_document/predefinition.html">
+            
+                <a href="../../about_this_document/predefinition.html">
+            
+                    
+                    사전 정의
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../about_this_document/copyright_notice.html">
+            
+                <a href="../../about_this_document/copyright_notice.html">
+            
+                    
+                    저작권 고지
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../about_this_document/contact.html">
+            
+                <a href="../../about_this_document/contact.html">
+            
+                    
+                    연락처
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    개요
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    OAuth 2.0
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="concept_and_term.html">
+            
+                <a href="concept_and_term.html">
+            
+                    
+                    개념 및 용어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    클라이언트(Client)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.3" data-path="grant.html">
+            
+                <a href="grant.html">
+            
+                    
+                    인가 증명(Grant)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../coinstack.html">
+            
+                <a href="../coinstack.html">
+            
+                    
+                    Coinstack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../coinstack_signon/">
+            
+                <a href="../coinstack_signon/">
+            
+                    
+                    Coinstack SignOn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../coinstack_signon/main_model.html">
+            
+                <a href="../coinstack_signon/main_model.html">
+            
+                    
+                    주요 모델
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../install_and_setup/">
+            
+                <a href="../../install_and_setup/">
+            
+                    
+                    설치 및 설정
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../install_and_setup/overview.html">
+            
+                <a href="../../install_and_setup/overview.html">
+            
+                    
+                    개요 및 준비사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../install_and_setup/install.html">
+            
+                <a href="../../install_and_setup/install.html">
+            
+                    
+                    Linux에서 설치 및 제거
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../install_and_setup/install_detail.html">
+            
+                <a href="../../install_and_setup/install_detail.html">
+            
+                    
+                    설치 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../getting_started/">
+            
+                <a href="../../getting_started/">
+            
+                    
+                    Coinstack SignOn 시작하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../getting_started/help.html">
+            
+                <a href="../../getting_started/help.html">
+            
+                    
+                    도움말 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../getting_started/server/">
+            
+                <a href="../../getting_started/server/">
+            
+                    
+                    서버
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../getting_started/server/config.html">
+            
+                <a href="../../getting_started/server/config.html">
+            
+                    
+                    서버 환경 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../getting_started/server/coin_recharge.html">
+            
+                <a href="../../getting_started/server/coin_recharge.html">
+            
+                    
+                    서버 코인 충전
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../getting_started/server/log.html">
+            
+                <a href="../../getting_started/server/log.html">
+            
+                    
+                    서버 로그
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../getting_started/server/admin.html">
+            
+                <a href="../../getting_started/server/admin.html">
+            
+                    
+                    서버 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../getting_started/client.html">
+            
+                <a href="../../getting_started/client.html">
+            
+                    
+                    클라이언트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../getting_started/user.html">
+            
+                <a href="../../getting_started/user.html">
+            
+                    
+                    사용자
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../getting_started/auth_code.html">
+            
+                <a href="../../getting_started/auth_code.html">
+            
+                    
+                    인가 코드 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../getting_started/token.html">
+            
+                <a href="../../getting_started/token.html">
+            
+                    
+                    인증 토큰 확인 및 만료
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../utilization/">
+            
+                <a href="../../utilization/">
+            
+                    
+                    활용
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../utilization/user_repository/">
+            
+                <a href="../../utilization/user_repository/">
+            
+                    
+                    사용자 인증정보 연동
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../utilization/user_repository/config.html">
+            
+                <a href="../../utilization/user_repository/config.html">
+            
+                    
+                    프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../utilization/user_repository/implementation.html">
+            
+                <a href="../../utilization/user_repository/implementation.html">
+            
+                    
+                    사용자 인증 정보 저장소 구현
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../utilization/user_repository/signon_integration.html">
+            
+                <a href="../../utilization/user_repository/signon_integration.html">
+            
+                    
+                    SignOn 서버와 통합
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../utilization/single_sign_on/">
+            
+                <a href="../../utilization/single_sign_on/">
+            
+                    
+                    Single Sign On
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../utilization/single_sign_on/servlet.html">
+            
+                <a href="../../utilization/single_sign_on/servlet.html">
+            
+                    
+                    Servlet 프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../utilization/single_sign_on/spring.html">
+            
+                <a href="../../utilization/single_sign_on/spring.html">
+            
+                    
+                    Spring 프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../../utilization/single_sign_on/resource_server.html">
+            
+                <a href="../../utilization/single_sign_on/resource_server.html">
+            
+                    
+                    리소스 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" data-path="../../utilization/single_sign_on/auth_control.html">
+            
+                <a href="../../utilization/single_sign_on/auth_control.html">
+            
+                    
+                    권한 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" data-path="../../utilization/single_sign_on/system_architecture.html">
+            
+                <a href="../../utilization/single_sign_on/system_architecture.html">
+            
+                    
+                    시스템 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../utilization/custom_login/">
+            
+                <a href="../../utilization/custom_login/">
+            
+                    
+                    사용자 정의 로그인 페이지
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../../utilization/custom_login/nginx_install.html">
+            
+                <a href="../../utilization/custom_login/nginx_install.html">
+            
+                    
+                    환경 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../../utilization/custom_login/nginx_config.html">
+            
+                <a href="../../utilization/custom_login/nginx_config.html">
+            
+                    
+                    Nginx 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../appendix/">
+            
+                <a href="../../appendix/">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../appendix/open_license.html">
+            
+                <a href="../../appendix/open_license.html">
+            
+                    
+                    오픈 소스 라이센스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../appendix/signon_config_list.html">
+            
+                <a href="../../appendix/signon_config_list.html">
+            
+                    
+                    설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../appendix/cli_auto_completion.html">
+            
+                <a href="../../appendix/cli_auto_completion.html">
+            
+                    
+                    명령행 자동 완성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../appendix/test/">
+            
+                <a href="../../appendix/test/">
+            
+                    
+                    테스트
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../../appendix/test/postman.html">
+            
+                <a href="../../appendix/test/postman.html">
+            
+                    
+                    Postman 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../../appendix/test/function.html">
+            
+                <a href="../../appendix/test/function.html">
+            
+                    
+                    기능 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../../appendix/test/load.html">
+            
+                <a href="../../appendix/test/load.html">
+            
+                    
+                    부하 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../appendix/performance.html">
+            
+                <a href="../../appendix/performance.html">
+            
+                    
+                    성능
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../appendix/known_issues/">
+            
+                <a href="../../appendix/known_issues/">
+            
+                    
+                    알려진 이슈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../../appendix/known_issues/unspecified_charset.html">
+            
+                <a href="../../appendix/known_issues/unspecified_charset.html">
+            
+                    
+                    문자셋 미지정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >인가 증명(Grant)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xC778;&#xAC00;-&#xC99D;&#xBA85;grant">&#xC778;&#xAC00; &#xC99D;&#xBA85;(Grant)</h1>
+<p>OAuth 2.0&#xC758; &#xC778;&#xAC00; &#xC99D;&#xBA85;&#xC744; &#xC704;&#xD55C; &#xC88B;&#xC740; &#xBC29;&#xBC95;&#xC744; &#xC81C;&#xC548;&#xD558;&#xACE0; &#xC788;&#xC744; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xD45C;&#xC900;&#xC548;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xC9C0; &#xC54A;&#xC740; &#xB354; &#xB9CE;&#xC740; &#xD65C;&#xC6A9;&#xC608;&#xC81C;&#xAC00; &#xC874;&#xC7AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xD45C;&#xC900;-&#xC778;&#xAC00;-&#xC99D;&#xBA85;">&#xD45C;&#xC900; &#xC778;&#xAC00; &#xC99D;&#xBA85;</h3>
+<h4 id="&#xC778;&#xAC00;-&#xCF54;&#xB4DC;authorization-code">&#xC778;&#xAC00; &#xCF54;&#xB4DC;(Authorization Code)</h4>
+<p>&#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;(Access token)&#xC744; &#xC5BB;&#xAE30; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xB418;&#xBA70;, <strong>confidential</strong> &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xCD5C;&#xC801;&#xD654;&#xB41C; &#xBC29;&#xBC95;&#xC785;&#xB2C8;&#xB2E4;. Redirection&#xC5D0; &#xAE30;&#xBC18;&#xC744; &#xB454; &#xC808;&#xCC28;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC870;&#xC791;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;(Browser)&#xACFC; &#xC0C1;&#xD638; &#xC791;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/overview/oauth_2.0/authorization_code_flow.png" alt=""></p>
+<p>A. User agent&#xB294; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xC640; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;&#xD560; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC758; URI&#xB97C; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xC5D0; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>B. &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;&#xC744; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xC5D0;&#xAC8C; &#xC694;&#xCCAD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>C. &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xB294; &#xC778;&#xC99D;&#xC5D0; &#xC131;&#xACF5;&#xD558;&#xBA74; &#xC778;&#xAC00; &#xCF54;&#xB4DC;&#xB97C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8; URI&#xC5D0; &#xD3EC;&#xD568;&#xD574;&#xC11C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>D. &#xC778;&#xAC00; &#xCF54;&#xB4DC;&#xB97C; &#xBC1B;&#xC740; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB294; &#xC778;&#xAC00; &#xCF54;&#xB4DC;&#xB97C; A &#xBC88;&#xC758; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8; URI&#xC5D0; &#xD3EC;&#xD568;&#xD574;&#xC11C; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xC694;&#xCCAD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>E. &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xB294; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xBC1C;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h4 id="&#xC554;&#xBB35;&#xC801;-&#xC99D;&#xBA85;implicit">&#xC554;&#xBB35;&#xC801; &#xC99D;&#xBA85;(Implicit)</h4>
+<p>&#xC778;&#xAC00; &#xCF54;&#xB4DC; &#xBC29;&#xC2DD;&#xC5D0;&#xC11C; &#xC778;&#xAC00; &#xCF54;&#xB4DC; &#xBC1C;&#xD589; &#xC808;&#xCC28;&#xB97C; &#xC0DD;&#xB7B5;&#xD55C; &#xBC29;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;. &#xB9AC;&#xD504;&#xB808;&#xC2DC; &#xD1A0;&#xD070;&#xC740; &#xBC1C;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xC73C;&#xBA70;, <strong>public</strong> &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xCD5C;&#xC801;&#xD654;&#xB41C; &#xC808;&#xCC28;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/overview/oauth_2.0/implicit_flow.png" alt=""></p>
+<p>A. User agent&#xB294; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xC640; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;&#xD560; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC758; URI&#xB97C; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xC5D0; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>B. &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;&#xC744; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xC5D0;&#xAC8C; &#xC694;&#xCCAD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>C. &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xB294; &#xC778;&#xC99D;&#xC5D0; &#xC131;&#xACF5;&#xD558;&#xBA74; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xD3EC;&#xD568;&#xD55C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8; URI&#xB97C; Fragment&#xC5D0; &#xD3EC;&#xD568;&#xD574;&#xC11C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>D. &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xBC1B;&#xC740; User agent&#xB294; Fragment&#xB97C; &#xC81C;&#xAC70;&#xD55C; URI&#xB97C; &#xC694;&#xCCAD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>E. &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xCD94;&#xCD9C;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>F. User agent&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xD1B5;&#xD574; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h4 id="&#xD328;&#xC2A4;&#xC6CC;&#xB4DC;-&#xBC29;&#xC2DD;password">&#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xBC29;&#xC2DD;(Password)</h4>
+<p>&#xB9AC;&#xC18C;&#xC2A4; &#xC624;&#xB108;&#xC640; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xC2E0;&#xB8B0;&#xAC00; &#xC788;&#xC744; &#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;. &#xC7A5;&#xCE58;&#xC758; OS&#xB098; &#xAD00;&#xB9AC;&#xC790; &#xAD8C;&#xD55C;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xB41C; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;, &#xB610;&#xB294; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xAC00; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xAC00; &#xAC19;&#xC740; &#xC2DC;&#xC2A4;&#xD15C;&#xC778; &#xACBD;&#xC6B0;&#xC5D0; &#xC801;&#xD569;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/overview/oauth_2.0/password_flow.png" alt=""></p>
+<p>A. &#xB9AC;&#xC18C;&#xC2A4; &#xC624;&#xB108;&#xB294; &#xD328;&#xC2A4;&#xC6CC;&#xB4DC; &#xC790;&#xACA9; &#xC99D;&#xBA85;&#xC744; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>B. &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB294; &#xC774; &#xC790;&#xACA9; &#xC99D;&#xBA85;&#xC744; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xC5D0; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>C. &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xB294; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xBC1C;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h4 id="&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;-&#xC790;&#xACA9;-&#xC99D;&#xBA85;client-credentials">&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xC790;&#xACA9; &#xC99D;&#xBA85;(Client Credentials)</h4>
+<p>&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xC790;&#xACA9; &#xC99D;&#xBA85;&#xB9CC;&#xC73C;&#xB85C; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xBC1C;&#xD589;&#xD560; &#xC218; &#xC788;&#xB294; &#xBC29;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;. <strong>confidential</strong> &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB9CC; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/overview/oauth_2.0/client_credentials_flow.png" alt=""></p>
+<p>A. &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xC778;&#xC99D;&#xC744; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xC5D0; &#xC804;&#xB2EC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>B. &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xB294; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xBC1C;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xC778;&#xAC00;-&#xC99D;&#xBA85;-&#xD655;&#xC7A5;">&#xC778;&#xAC00; &#xC99D;&#xBA85; &#xD655;&#xC7A5;</h3>
+<p>&#xD45C;&#xC900;&#xC548;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xBC29;&#xC2DD;&#xC774;&#xB354;&#xB77C;&#xB3C4; grant_type &#xC778;&#xC790;&#xAC12;&#xC744; URI&#xB85C; &#xC9C0;&#xC815;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC544;&#xB798;&#xC758; &#xC608;&#xC2DC; &#xC678;&#xC5D0;&#xC218;&#xB9CE;&#xC740; &#xD655;&#xC7A5; &#xC608;&#xC81C;&#xAC00; &#xC874;&#xC7AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h4 id="saml-20-bearer-assertion-profiles-for-oauth-20">SAML 2.0 Bearer Assertion Profiles for OAuth 2.0</h4>
+<p>SAML 2.0 &#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC778;&#xC99D;/&#xC778;&#xAC00;&#xB97C; &#xD558;&#xB294; &#xD45C;&#xC900;&#xC548;&#xC785;&#xB2C8;&#xB2E4;. &#xBCF5;&#xC7A1;&#xD55C; &#xADDC;&#xCE59;&#xC758; &#xC778;&#xC99D;/&#xC778;&#xAC00; &#xC808;&#xCC28;&#xB97C; &#xC801;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="https://tools.ietf.org/html/draft-ietf-oauth-saml2-bearer-09" target="_blank">https://tools.ietf.org/html/draft-ietf-oauth-saml2-bearer-09</a>&#xB97C; &#xD655;&#xC778;&#xD574; &#xBCF4;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+<h4 id="&#xC7A5;&#xCE58;-&#xCF54;&#xB4DC;">&#xC7A5;&#xCE58; &#xCF54;&#xB4DC;</h4>
+<p>&#xD50C;&#xB808;&#xC774;&#xC2A4;&#xD14C;&#xC774;&#xC158;&#xC774;&#xB098; YouTube &#xD50C;&#xB808;&#xC774;&#xC5B4; &#xAC19;&#xC740; &#xC7A5;&#xCE58;&#xC0C1;&#xC5D0;&#xC11C; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;(&#xB610;&#xB294; &#xC11C;&#xBE44;&#xC2A4;)&#xC73C;&#xB85C; &#xC811;&#xADFC;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC778;&#xAC00;&#xC99D;&#xBA85; &#xBC29;&#xBC95;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="https://alexbilbie.com/2016/04/oauth-2-device-flow-grant/" target="_blank">https://alexbilbie.com/2016/04/oauth-2-device-flow-grant/</a>&#xB97C; &#xD655;&#xC778;&#xD574; &#xBCF4;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="client.html" class="navigation navigation-prev " aria-label="Previous page: 클라이언트(Client)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../coinstack.html" class="navigation navigation-next " aria-label="Next page: Coinstack">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"인가 증명(Grant)","level":"1.3.1.3","depth":3,"next":{"title":"Coinstack","level":"1.3.2","depth":2,"path":"overview/coinstack.md","ref":"overview/coinstack.md","articles":[]},"previous":{"title":"클라이언트(Client)","level":"1.3.1.2","depth":3,"path":"overview/oauth_2.0/client.md","ref":"overview/oauth_2.0/client.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","codeblock-filename"],"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"codeblock-filename":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"NanumGothic","paperSize":"a4","chapterMark":"both","pageBreaksBefore":"/","margin":{"right":42,"left":62,"top":56,"bottom":56,"   left":42,"   top":56,"   bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"overview/oauth_2.0/grant.md","mtime":"2018-09-27T02:44:54.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-27T02:45:30.397Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

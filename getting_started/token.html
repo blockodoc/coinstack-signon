@@ -1,0 +1,1100 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>인증 토큰 확인 및 만료 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../utilization/" />
+    
+    
+    <link rel="prev" href="auth_code.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Coinstack SignOn 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../about_this_document/">
+            
+                <a href="../about_this_document/">
+            
+                    
+                    본 문서에 관하여
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../about_this_document/precondition.html">
+            
+                <a href="../about_this_document/precondition.html">
+            
+                    
+                    전제 조건
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../about_this_document/document_info.html">
+            
+                <a href="../about_this_document/document_info.html">
+            
+                    
+                    문서 정보
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../about_this_document/predefinition.html">
+            
+                <a href="../about_this_document/predefinition.html">
+            
+                    
+                    사전 정의
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../about_this_document/copyright_notice.html">
+            
+                <a href="../about_this_document/copyright_notice.html">
+            
+                    
+                    저작권 고지
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../about_this_document/contact.html">
+            
+                <a href="../about_this_document/contact.html">
+            
+                    
+                    연락처
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../overview/">
+            
+                <a href="../overview/">
+            
+                    
+                    개요
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../overview/oauth_2.0/">
+            
+                <a href="../overview/oauth_2.0/">
+            
+                    
+                    OAuth 2.0
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../overview/oauth_2.0/concept_and_term.html">
+            
+                <a href="../overview/oauth_2.0/concept_and_term.html">
+            
+                    
+                    개념 및 용어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../overview/oauth_2.0/client.html">
+            
+                <a href="../overview/oauth_2.0/client.html">
+            
+                    
+                    클라이언트(Client)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../overview/oauth_2.0/grant.html">
+            
+                <a href="../overview/oauth_2.0/grant.html">
+            
+                    
+                    인가 증명(Grant)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../overview/coinstack.html">
+            
+                <a href="../overview/coinstack.html">
+            
+                    
+                    Coinstack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../overview/coinstack_signon/">
+            
+                <a href="../overview/coinstack_signon/">
+            
+                    
+                    Coinstack SignOn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../overview/coinstack_signon/main_model.html">
+            
+                <a href="../overview/coinstack_signon/main_model.html">
+            
+                    
+                    주요 모델
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../install_and_setup/">
+            
+                <a href="../install_and_setup/">
+            
+                    
+                    설치 및 설정
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../install_and_setup/overview.html">
+            
+                <a href="../install_and_setup/overview.html">
+            
+                    
+                    개요 및 준비사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../install_and_setup/install.html">
+            
+                <a href="../install_and_setup/install.html">
+            
+                    
+                    Linux에서 설치 및 제거
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../install_and_setup/install_detail.html">
+            
+                <a href="../install_and_setup/install_detail.html">
+            
+                    
+                    설치 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Coinstack SignOn 시작하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="help.html">
+            
+                <a href="help.html">
+            
+                    
+                    도움말 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="server/">
+            
+                <a href="server/">
+            
+                    
+                    서버
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="server/config.html">
+            
+                <a href="server/config.html">
+            
+                    
+                    서버 환경 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="server/coin_recharge.html">
+            
+                <a href="server/coin_recharge.html">
+            
+                    
+                    서버 코인 충전
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="server/log.html">
+            
+                <a href="server/log.html">
+            
+                    
+                    서버 로그
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="server/admin.html">
+            
+                <a href="server/admin.html">
+            
+                    
+                    서버 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    클라이언트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="user.html">
+            
+                <a href="user.html">
+            
+                    
+                    사용자
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="auth_code.html">
+            
+                <a href="auth_code.html">
+            
+                    
+                    인가 코드 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6" data-path="token.html">
+            
+                <a href="token.html">
+            
+                    
+                    인증 토큰 확인 및 만료
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../utilization/">
+            
+                <a href="../utilization/">
+            
+                    
+                    활용
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../utilization/user_repository/">
+            
+                <a href="../utilization/user_repository/">
+            
+                    
+                    사용자 인증정보 연동
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../utilization/user_repository/config.html">
+            
+                <a href="../utilization/user_repository/config.html">
+            
+                    
+                    프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../utilization/user_repository/implementation.html">
+            
+                <a href="../utilization/user_repository/implementation.html">
+            
+                    
+                    사용자 인증 정보 저장소 구현
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../utilization/user_repository/signon_integration.html">
+            
+                <a href="../utilization/user_repository/signon_integration.html">
+            
+                    
+                    SignOn 서버와 통합
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../utilization/single_sign_on/">
+            
+                <a href="../utilization/single_sign_on/">
+            
+                    
+                    Single Sign On
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../utilization/single_sign_on/servlet.html">
+            
+                <a href="../utilization/single_sign_on/servlet.html">
+            
+                    
+                    Servlet 프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../utilization/single_sign_on/spring.html">
+            
+                <a href="../utilization/single_sign_on/spring.html">
+            
+                    
+                    Spring 프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../utilization/single_sign_on/resource_server.html">
+            
+                <a href="../utilization/single_sign_on/resource_server.html">
+            
+                    
+                    리소스 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" data-path="../utilization/single_sign_on/auth_control.html">
+            
+                <a href="../utilization/single_sign_on/auth_control.html">
+            
+                    
+                    권한 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" data-path="../utilization/single_sign_on/system_architecture.html">
+            
+                <a href="../utilization/single_sign_on/system_architecture.html">
+            
+                    
+                    시스템 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../utilization/custom_login/">
+            
+                <a href="../utilization/custom_login/">
+            
+                    
+                    사용자 정의 로그인 페이지
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../utilization/custom_login/nginx_install.html">
+            
+                <a href="../utilization/custom_login/nginx_install.html">
+            
+                    
+                    환경 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../utilization/custom_login/nginx_config.html">
+            
+                <a href="../utilization/custom_login/nginx_config.html">
+            
+                    
+                    Nginx 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../appendix/">
+            
+                <a href="../appendix/">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../appendix/open_license.html">
+            
+                <a href="../appendix/open_license.html">
+            
+                    
+                    오픈 소스 라이센스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../appendix/signon_config_list.html">
+            
+                <a href="../appendix/signon_config_list.html">
+            
+                    
+                    설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../appendix/cli_auto_completion.html">
+            
+                <a href="../appendix/cli_auto_completion.html">
+            
+                    
+                    명령행 자동 완성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../appendix/test/">
+            
+                <a href="../appendix/test/">
+            
+                    
+                    테스트
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../appendix/test/postman.html">
+            
+                <a href="../appendix/test/postman.html">
+            
+                    
+                    Postman 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../appendix/test/function.html">
+            
+                <a href="../appendix/test/function.html">
+            
+                    
+                    기능 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../appendix/test/load.html">
+            
+                <a href="../appendix/test/load.html">
+            
+                    
+                    부하 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../appendix/performance.html">
+            
+                <a href="../appendix/performance.html">
+            
+                    
+                    성능
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../appendix/known_issues/">
+            
+                <a href="../appendix/known_issues/">
+            
+                    
+                    알려진 이슈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../appendix/known_issues/unspecified_charset.html">
+            
+                <a href="../appendix/known_issues/unspecified_charset.html">
+            
+                    
+                    문자셋 미지정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >인증 토큰 확인 및 만료</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xC778;&#xC99D;-&#xD1A0;&#xD070;-&#xD655;&#xC778;-&#xBC0F;-&#xB9CC;&#xB8CC;">&#xC778;&#xC99D; &#xD1A0;&#xD070; &#xD655;&#xC778; &#xBC0F; &#xB9CC;&#xB8CC;</h1>
+<p>&#xD1A0;&#xD070;&#xC740; &#xB9AC;&#xC18C;&#xC2A4; &#xC11C;&#xBC84;&#xC5D0; &#xB9AC;&#xC18C;&#xC2A4;&#xB97C; &#xC694;&#xCCAD;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC778;&#xAC00; &#xC11C;&#xBC84;&#xB85C;&#xBD80;&#xD130; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xAC12;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h4 id="&#xC561;&#xC138;&#xC2A4;-&#xD1A0;&#xD070;-&#xBC1C;&#xD589;">&#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070; &#xBC1C;&#xD589;</h4>
+<p>&#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC740; <a href="../undefined-1/oauth-2.0/grant.md">&#xC778;&#xAC00;&#xC99D;&#xBA85;(Grant)</a>&#xC5D0;&#xC11C; &#xC124;&#xBA85;&#xD55C; 4&#xAC00;&#xC9C0; &#xBC29;&#xC2DD;&#xC744; &#xD1B5;&#xD574; &#xBC1C;&#xAE09; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">// Authorization code
+$ coinstack-signon token create --type code  --client <span class="hljs-variable">${CLIENT_ID}</span> --secret <span class="hljs-variable">${CLIENT_SECRET}</span>  --endpoint <span class="hljs-variable">${ENDPOINT}</span> --redirect <span class="hljs-variable">${REDIRECT_URI}</span> --code <span class="hljs-variable">${AUTHORIZATION_CODE}</span>
+
+// Implicit
+$ coinstack-signon token create --type implicit --user <span class="hljs-variable">${USERNAME}</span> --password <span class="hljs-variable">${PASSWORD}</span> --client <span class="hljs-variable">${CLIENT_ID}</span> --secret <span class="hljs-variable">${CLIENT_SECRET}</span>  --endpoint <span class="hljs-variable">${ENDPOINT}</span>
+
+// Resource Owner Password Credentials
+$ coinstack-signon token create --type password --user <span class="hljs-variable">${USERNAME}</span> --password <span class="hljs-variable">${PASSWORD}</span> --client <span class="hljs-variable">${CLIENT_ID}</span> --secret <span class="hljs-variable">${CLIENT_SECRET}</span>  --endpoint <span class="hljs-variable">${ENDPOINT}</span>
+
+// Client Credentials
+$ coinstack-signon token create --type credentials  --client <span class="hljs-variable">${CLIENT_ID}</span> --secret <span class="hljs-variable">${CLIENT_SECRET}</span>  --endpoint <span class="hljs-variable">${ENDPOINT}</span>
+</code></pre>
+<p>&#xBA85;&#xB839;&#xC5B4; &#xC2E4;&#xD589; &#xD6C4; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;&#xBA74;, &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xC544;&#xC774;&#xB514; &#xB610;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xAC00; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC544; &#xBC1C;&#xC0DD;&#xD55C; &#xC624;&#xB958;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">Check your clientId or username, password.
+</code></pre>
+<p>&#xB9CC;&#xC57D;, &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xBB38;&#xAD6C;&#xAC00; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;&#xBA74; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xC778;&#xAC00; &#xCF54;&#xB4DC;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC5EC; &#xBC1C;&#xC0DD;&#xD55C; &#xC624;&#xB958;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">The code not found.
+</code></pre>
+<p>&#xB9CC;&#xC57D;, Coinstack SignOn &#xC11C;&#xBC84;&#xAC00; &#xAEBC;&#xC838;&#xC788;&#xB2E4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xACB0;&#xACFC;&#xB97C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">Connection refused. Check server endpoint.
+</code></pre>
+<h4 id="&#xC561;&#xC138;&#xC2A4;-&#xD1A0;&#xD070;-&#xC815;&#xBCF4;-&#xC870;&#xD68C;">&#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070; &#xC815;&#xBCF4; &#xC870;&#xD68C;</h4>
+<p>&#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC5D0; &#xAD00;&#xD55C; &#xC815;&#xBCF4;&#xB294; &#xB2E4;&#xC74C;&#xC758; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xD1B5;&#xD574; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">// Direct access to the block chain
+$ coinstack-signon token check <span class="hljs-variable">${ACCESS_TOKEN}</span>
+
+// Use endpoint
+$ coinstack-signon token check --client <span class="hljs-variable">${CLIENT_ID}</span> --secret <span class="hljs-variable">${CLIENT_SECRET}</span> --endpoint <span class="hljs-variable">${ENDPOINT}</span> <span class="hljs-variable">${ACCESS_TOKEN}</span>
+</code></pre>
+<p>&#xC870;&#xD68C;&#xAC00; &#xC798; &#xB418;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xACB0;&#xACFC;&#xB97C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">AdditionalInformation    {<span class="hljs-variable">${ADDITIONAL_INFO_KEY}</span>=<span class="hljs-variable">${ADDITIONAL_INFO_VALUE}</span>}
+Expiration               <span class="hljs-variable">${DATE}</span>
+RefreshToken             <span class="hljs-variable">${REFRESH_TOKEN_VALUE}</span>
+Scope                    <span class="hljs-variable">${SCOPE}</span>
+                         .
+                         .
+                         .
+TokenType                <span class="hljs-variable">${TOKEN_TYPE}</span>
+Value                    <span class="hljs-variable">${ACCESS_TOKEN_VALUE}</span>
+</code></pre>
+<p>&#xBA85;&#xB839;&#xC5B4; &#xC2E4;&#xD589; &#xD6C4; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;&#xBA74;, &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xC544;&#xC774;&#xB514; &#xB610;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xAC00; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC544; &#xBC1C;&#xC0DD;&#xD55C; &#xC624;&#xB958;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">Check your clientId or username, password.
+</code></pre>
+<p>&#xB9CC;&#xC57D;, &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xBB38;&#xAD6C;&#xAC00; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;&#xBA74; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xD1A0;&#xD070;&#xC744;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC5EC; &#xBC1C;&#xC0DD;&#xD55C; &#xC624;&#xB958;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">The token not found.
+</code></pre>
+<p>&#xB9CC;&#xC57D;, Coinstack SignOn &#xC11C;&#xBC84;&#xAC00; &#xAEBC;&#xC838;&#xC788;&#xB2E4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xACB0;&#xACFC;&#xB97C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">Connection refused. Check server endpoint.
+</code></pre>
+<h3 id="&#xB9AC;&#xD504;&#xB808;&#xC2DC;-&#xD1A0;&#xD070;&#xC73C;&#xB85C;-&#xC7AC;&#xBC1C;&#xD589;">&#xB9AC;&#xD504;&#xB808;&#xC2DC; &#xD1A0;&#xD070;&#xC73C;&#xB85C; &#xC7AC;&#xBC1C;&#xD589;</h3>
+<p>&#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xACFC; &#xD568;&#xAED8; &#xC81C;&#xACF5;&#xB418;&#xC5B4;&#xC9C0;&#xB294; &#xB9AC;&#xD504;&#xB808;&#xC2DC; &#xD1A0;&#xD070;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xB9CC;&#xB8CC;&#xB418;&#xAE30; &#xC804;&#xC778; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xB2E4;&#xC74C;&#xC758; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xD1B5;&#xD574; &#xC7AC;&#xBC1C;&#xD589;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">// Direct access to the block chain
+$ coinstack-signon token refresh --privatekey <span class="hljs-variable">${ADMIN_PRIVATEKEY}</span> <span class="hljs-variable">${REFRESH_TOKEN}</span>
+
+// Use endpoint
+$ coinstack-signon token refresh --client <span class="hljs-variable">${CLIENT_ID}</span> --secret <span class="hljs-variable">${CLIENT_SECRET}</span> --endpoint <span class="hljs-variable">${ENDPOINT}</span> <span class="hljs-variable">${REFRESH_TOKEN}</span>
+</code></pre>
+<p>&#xBA85;&#xB839;&#xC5B4; &#xC2E4;&#xD589; &#xD6C4; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;&#xBA74;, &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xC544;&#xC774;&#xB514; &#xB610;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xAC00; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC544; &#xBC1C;&#xC0DD;&#xD55C; &#xC624;&#xB958;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">Check your clientId or username, password.
+</code></pre>
+<p>&#xB9CC;&#xC57D;, &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xBB38;&#xAD6C;&#xAC00; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;&#xBA74; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xD1A0;&#xD070;&#xC744;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC5EC; &#xBC1C;&#xC0DD;&#xD55C; &#xC624;&#xB958;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">The token not found.
+</code></pre>
+<p>&#xB9CC;&#xC57D;, Coinstack SignOn &#xC11C;&#xBC84;&#xAC00; &#xAEBC;&#xC838;&#xC788;&#xB2E4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xACB0;&#xACFC;&#xB97C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-text">Connection refused. Check server endpoint.
+</code></pre>
+<h4 id="&#xC561;&#xC138;&#xC2A4;-&#xD1A0;&#xD070;-&#xBB34;&#xD6A8;&#xD654;">&#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070; &#xBB34;&#xD6A8;&#xD654;</h4>
+<p>&#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xD1A0;&#xD070;&#xC744; &#xBA85;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xBB34;&#xD6A8;&#xD654;&#xD558;&#xB294; &#xAC83;&#xC740; &#xB2E4;&#xC74C;&#xC758; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xD1B5;&#xD574; &#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-bash">$ coinstack-signon token remove \
+    --privatekey <span class="hljs-variable">${ADMIN_PRIVATEKEY}</span> \
+    <span class="hljs-variable">${ACCESS_TOKEN}</span>
+</code></pre>
+<p>&#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xC561;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xC744; &#xBB34;&#xD6A8;&#xD654; &#xD558;&#xAC8C; &#xB418;&#xBA74; &#xAC19;&#xC774; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xB9AC;&#xD504;&#xB808;&#xC2DC; &#xD1A0;&#xD070;&#xB3C4; &#xBB34;&#xD6A8;&#xD654; &#xB418;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="auth_code.html" class="navigation navigation-prev " aria-label="Previous page: 인가 코드 확인">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../utilization/" class="navigation navigation-next " aria-label="Next page: 활용">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"인증 토큰 확인 및 만료","level":"1.5.6","depth":2,"next":{"title":"활용","level":"1.6","depth":1,"path":"utilization/README.md","ref":"utilization/README.md","articles":[{"title":"사용자 인증정보 연동","level":"1.6.1","depth":2,"path":"utilization/user_repository/README.md","ref":"utilization/user_repository/README.md","articles":[{"title":"프로젝트 설정","level":"1.6.1.1","depth":3,"path":"utilization/user_repository/config.md","ref":"utilization/user_repository/config.md","articles":[]},{"title":"사용자 인증 정보 저장소 구현","level":"1.6.1.2","depth":3,"path":"utilization/user_repository/implementation.md","ref":"utilization/user_repository/implementation.md","articles":[]},{"title":"SignOn 서버와 통합","level":"1.6.1.3","depth":3,"path":"utilization/user_repository/signon_integration.md","ref":"utilization/user_repository/signon_integration.md","articles":[]}]},{"title":"Single Sign On","level":"1.6.2","depth":2,"path":"utilization/single_sign_on/README.md","ref":"utilization/single_sign_on/README.md","articles":[{"title":"Servlet 프로젝트 설정","level":"1.6.2.1","depth":3,"path":"utilization/single_sign_on/servlet.md","ref":"utilization/single_sign_on/servlet.md","articles":[]},{"title":"Spring 프로젝트 설정","level":"1.6.2.2","depth":3,"path":"utilization/single_sign_on/spring.md","ref":"utilization/single_sign_on/spring.md","articles":[]},{"title":"리소스 서버 만들기","level":"1.6.2.3","depth":3,"path":"utilization/single_sign_on/resource_server.md","ref":"utilization/single_sign_on/resource_server.md","articles":[]},{"title":"권한 제어","level":"1.6.2.4","depth":3,"path":"utilization/single_sign_on/auth_control.md","ref":"utilization/single_sign_on/auth_control.md","articles":[]},{"title":"시스템 구성","level":"1.6.2.5","depth":3,"path":"utilization/single_sign_on/system_architecture.md","ref":"utilization/single_sign_on/system_architecture.md","articles":[]}]},{"title":"사용자 정의 로그인 페이지","level":"1.6.3","depth":2,"path":"utilization/custom_login/README.md","ref":"utilization/custom_login/README.md","articles":[{"title":"환경 구성","level":"1.6.3.1","depth":3,"path":"utilization/custom_login/nginx_install.md","ref":"utilization/custom_login/nginx_install.md","articles":[]},{"title":"Nginx 설정","level":"1.6.3.2","depth":3,"path":"utilization/custom_login/nginx_config.md","ref":"utilization/custom_login/nginx_config.md","articles":[]}]}]},"previous":{"title":"인가 코드 확인","level":"1.5.5","depth":2,"path":"getting_started/auth_code.md","ref":"getting_started/auth_code.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","codeblock-filename"],"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"codeblock-filename":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"NanumGothic","paperSize":"a4","chapterMark":"both","pageBreaksBefore":"/","margin":{"right":42,"left":62,"top":56,"bottom":56,"   left":42,"   top":56,"   bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting_started/token.md","mtime":"2018-09-27T02:44:54.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-27T02:45:30.397Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

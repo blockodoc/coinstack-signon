@@ -1,0 +1,1373 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>리소스 서버 만들기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-filename/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="auth_control.html" />
+    
+    
+    <link rel="prev" href="spring.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Coinstack SignOn 소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../about_this_document/">
+            
+                <a href="../../about_this_document/">
+            
+                    
+                    본 문서에 관하여
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../about_this_document/precondition.html">
+            
+                <a href="../../about_this_document/precondition.html">
+            
+                    
+                    전제 조건
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../about_this_document/document_info.html">
+            
+                <a href="../../about_this_document/document_info.html">
+            
+                    
+                    문서 정보
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../about_this_document/predefinition.html">
+            
+                <a href="../../about_this_document/predefinition.html">
+            
+                    
+                    사전 정의
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../about_this_document/copyright_notice.html">
+            
+                <a href="../../about_this_document/copyright_notice.html">
+            
+                    
+                    저작권 고지
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../about_this_document/contact.html">
+            
+                <a href="../../about_this_document/contact.html">
+            
+                    
+                    연락처
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../overview/">
+            
+                <a href="../../overview/">
+            
+                    
+                    개요
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../overview/oauth_2.0/">
+            
+                <a href="../../overview/oauth_2.0/">
+            
+                    
+                    OAuth 2.0
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../overview/oauth_2.0/concept_and_term.html">
+            
+                <a href="../../overview/oauth_2.0/concept_and_term.html">
+            
+                    
+                    개념 및 용어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../overview/oauth_2.0/client.html">
+            
+                <a href="../../overview/oauth_2.0/client.html">
+            
+                    
+                    클라이언트(Client)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../overview/oauth_2.0/grant.html">
+            
+                <a href="../../overview/oauth_2.0/grant.html">
+            
+                    
+                    인가 증명(Grant)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../overview/coinstack.html">
+            
+                <a href="../../overview/coinstack.html">
+            
+                    
+                    Coinstack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../overview/coinstack_signon/">
+            
+                <a href="../../overview/coinstack_signon/">
+            
+                    
+                    Coinstack SignOn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../overview/coinstack_signon/main_model.html">
+            
+                <a href="../../overview/coinstack_signon/main_model.html">
+            
+                    
+                    주요 모델
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../install_and_setup/">
+            
+                <a href="../../install_and_setup/">
+            
+                    
+                    설치 및 설정
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../install_and_setup/overview.html">
+            
+                <a href="../../install_and_setup/overview.html">
+            
+                    
+                    개요 및 준비사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../install_and_setup/install.html">
+            
+                <a href="../../install_and_setup/install.html">
+            
+                    
+                    Linux에서 설치 및 제거
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../install_and_setup/install_detail.html">
+            
+                <a href="../../install_and_setup/install_detail.html">
+            
+                    
+                    설치 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../getting_started/">
+            
+                <a href="../../getting_started/">
+            
+                    
+                    Coinstack SignOn 시작하기
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../getting_started/help.html">
+            
+                <a href="../../getting_started/help.html">
+            
+                    
+                    도움말 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../getting_started/server/">
+            
+                <a href="../../getting_started/server/">
+            
+                    
+                    서버
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../getting_started/server/config.html">
+            
+                <a href="../../getting_started/server/config.html">
+            
+                    
+                    서버 환경 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../getting_started/server/coin_recharge.html">
+            
+                <a href="../../getting_started/server/coin_recharge.html">
+            
+                    
+                    서버 코인 충전
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../getting_started/server/log.html">
+            
+                <a href="../../getting_started/server/log.html">
+            
+                    
+                    서버 로그
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../getting_started/server/admin.html">
+            
+                <a href="../../getting_started/server/admin.html">
+            
+                    
+                    서버 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../getting_started/client.html">
+            
+                <a href="../../getting_started/client.html">
+            
+                    
+                    클라이언트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../getting_started/user.html">
+            
+                <a href="../../getting_started/user.html">
+            
+                    
+                    사용자
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../getting_started/auth_code.html">
+            
+                <a href="../../getting_started/auth_code.html">
+            
+                    
+                    인가 코드 확인
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../getting_started/token.html">
+            
+                <a href="../../getting_started/token.html">
+            
+                    
+                    인증 토큰 확인 및 만료
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    활용
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../user_repository/">
+            
+                <a href="../user_repository/">
+            
+                    
+                    사용자 인증정보 연동
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../user_repository/config.html">
+            
+                <a href="../user_repository/config.html">
+            
+                    
+                    프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../user_repository/implementation.html">
+            
+                <a href="../user_repository/implementation.html">
+            
+                    
+                    사용자 인증 정보 저장소 구현
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../user_repository/signon_integration.html">
+            
+                <a href="../user_repository/signon_integration.html">
+            
+                    
+                    SignOn 서버와 통합
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Single Sign On
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="servlet.html">
+            
+                <a href="servlet.html">
+            
+                    
+                    Servlet 프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="spring.html">
+            
+                <a href="spring.html">
+            
+                    
+                    Spring 프로젝트 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2.3" data-path="resource_server.html">
+            
+                <a href="resource_server.html">
+            
+                    
+                    리소스 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.4" data-path="auth_control.html">
+            
+                <a href="auth_control.html">
+            
+                    
+                    권한 제어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.5" data-path="system_architecture.html">
+            
+                <a href="system_architecture.html">
+            
+                    
+                    시스템 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../custom_login/">
+            
+                <a href="../custom_login/">
+            
+                    
+                    사용자 정의 로그인 페이지
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../custom_login/nginx_install.html">
+            
+                <a href="../custom_login/nginx_install.html">
+            
+                    
+                    환경 구성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../custom_login/nginx_config.html">
+            
+                <a href="../custom_login/nginx_config.html">
+            
+                    
+                    Nginx 설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../appendix/">
+            
+                <a href="../../appendix/">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../appendix/open_license.html">
+            
+                <a href="../../appendix/open_license.html">
+            
+                    
+                    오픈 소스 라이센스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../appendix/signon_config_list.html">
+            
+                <a href="../../appendix/signon_config_list.html">
+            
+                    
+                    설정
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../appendix/cli_auto_completion.html">
+            
+                <a href="../../appendix/cli_auto_completion.html">
+            
+                    
+                    명령행 자동 완성
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../appendix/test/">
+            
+                <a href="../../appendix/test/">
+            
+                    
+                    테스트
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../../appendix/test/postman.html">
+            
+                <a href="../../appendix/test/postman.html">
+            
+                    
+                    Postman 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../../appendix/test/function.html">
+            
+                <a href="../../appendix/test/function.html">
+            
+                    
+                    기능 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../../appendix/test/load.html">
+            
+                <a href="../../appendix/test/load.html">
+            
+                    
+                    부하 테스트
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../appendix/performance.html">
+            
+                <a href="../../appendix/performance.html">
+            
+                    
+                    성능
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../appendix/known_issues/">
+            
+                <a href="../../appendix/known_issues/">
+            
+                    
+                    알려진 이슈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../../appendix/known_issues/unspecified_charset.html">
+            
+                <a href="../../appendix/known_issues/unspecified_charset.html">
+            
+                    
+                    문자셋 미지정
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >리소스 서버 만들기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xB9AC;&#xC18C;&#xC2A4;-&#xC11C;&#xBC84;-&#xB9CC;&#xB4E4;&#xAE30;">&#xB9AC;&#xC18C;&#xC2A4; &#xC11C;&#xBC84; &#xB9CC;&#xB4E4;&#xAE30;</h1>
+<h2 id="&#xD658;&#xACBD;-&#xC124;&#xC815;">&#xD658;&#xACBD; &#xC124;&#xC815;</h2>
+<p>&#xBCF8; &#xC608;&#xC81C;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD658;&#xACBD; &#xC124;&#xC815;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC21C;&#xC11C;&#xB85C; &#xC9C4;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;-&#xB4F1;&#xB85D;">&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xB4F1;&#xB85D;</h3>
+<pre><code class="lang-text">$ coinstack-signon client create --privatekey ${ADMIN_PRIVATEKEY} &lt;&lt;EOF
+{
+  &quot;clientId&quot;: &quot;trusted&quot;,
+  &quot;clientSecret&quot;: &quot;secret&quot;,
+  &quot;authorizedGrantTypes&quot;: [&quot;authorization_code&quot;],
+  &quot;scopes&quot;: [&quot;read&quot;, &quot;write&quot;],
+  &quot;registeredRedirectUris&quot;: [&quot;http://localhost:8888&quot;]
+}
+EOF
+</code></pre>
+<h3 id="&#xC0AC;&#xC6A9;&#xC790;-&#xB4F1;&#xB85D;">&#xC0AC;&#xC6A9;&#xC790; &#xB4F1;&#xB85D;</h3>
+<pre><code class="lang-text">$ coinstack-signon user create --privatekey ${ADMIN_PRIVATEKEY} &lt;&lt;EOF
+{
+  &quot;username&quot;: &quot;user&quot;,
+  &quot;password&quot;: &quot;password&quot;,
+  &quot;authorities&quot;: [&quot;USER&quot;]
+}
+EOF
+</code></pre>
+<h3 id="signon-&#xC11C;&#xBC84;-&#xAD6C;&#xB3D9;">SignOn &#xC11C;&#xBC84; &#xAD6C;&#xB3D9;</h3>
+<pre><code class="lang-text">$ coinstack-signon server start
+</code></pre>
+<p>&#xC774;&#xC5D0; &#xB300;&#xD55C; &#xC790;&#xC138;&#xD55C; &#xC124;&#xC815;&#xC740; <a href="../../getting_started/server">&#xC11C;&#xBC84;</a>, <a href="../../getting_started/client.html">&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;</a>, <a href="../../getting_started/user.html">&#xC0AC;&#xC6A9;&#xC790;</a>&#xB97C; &#xCC38;&#xC870;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xB9AC;&#xC18C;&#xC2A4;-&#xB9CC;&#xB4E4;&#xAE30;">&#xB9AC;&#xC18C;&#xC2A4; &#xB9CC;&#xB4E4;&#xAE30;</h2>
+<p>&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC811;&#xADFC;&#xD558;&#xB294; &#xB9AC;&#xC18C;&#xC2A4;(&#xD398;&#xC774;&#xC9C0;)&#xB97C; &#xC791;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB9AC;&#xC18C;&#xC2A4; &#xD30C;&#xC77C;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC73C;&#xBA70;, ${PROJECT_HOME}/src/main/webapp &#xB514;&#xB809;&#xD130;&#xB9AC;&#xC5D0; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h3 id="mainpagejsp">main_page.jsp</h3>
+<pre><code class="lang-text">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Main page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;b&gt;&#xBA54;&#xC778; &#xD398;&#xC774;&#xC9C0;&lt;/b&gt;&lt;br&gt;
+    Coinstack SSO &#xC608;&#xC81C;&#xC5D0; &#xC624;&#xC2E0;&#xAC78; &#xD658;&#xC601;&#xD569;&#xB2C8;&#xB2E4;.
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="&#xD398;&#xC774;&#xC9C0;-&#xD655;&#xC778;">&#xD398;&#xC774;&#xC9C0; &#xD655;&#xC778;</h2>
+<p>&#xD398;&#xC774;&#xC9C0; &#xD655;&#xC778;&#xC744; &#xC704;&#xD574; &#xC11C;&#xBC84;&#xB97C; &#xAD6C;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;. ${PROJECT_HOME}&#xC5D0;&#xC11C; &#xB2E4;&#xC74C;&#xC758; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC2E4;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<div><p class="code-filename"><em>Servlet</em></p></div>
+<pre><code class="lang-text">$ mvn jetty:run
+</code></pre>
+<div><p class="code-filename"><em>Spring</em></p></div>
+<pre><code class="lang-text">$ mvn spring-boot:run -Dspring.profiles.active=development
+</code></pre>
+<p>&#xC11C;&#xBC84;&#xAC00; &#xAD6C;&#xB3D9;&#xB418;&#xBA74; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; <a href="http://localhost:8888/main_page.jsp" target="_blank">http://localhost:8888/main_page.jsp</a>&#xC5D0; &#xC811;&#xADFC;&#xD574;&#xBD05;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/sso-main-page1%20%282%29.png" alt=""></p>
+<h2 id="client-&#xC815;&#xBCF4;">Client &#xC815;&#xBCF4;</h2>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB370;&#xC774;&#xD130; &#xBAA9;&#xB85D;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xC11C;&#xBE14;&#xB9BF;-&#xD544;&#xD130;-&#xB9CC;&#xB4E4;&#xAE30;">&#xC11C;&#xBE14;&#xB9BF; &#xD544;&#xD130; &#xB9CC;&#xB4E4;&#xAE30;</h3>
+<p>@WebFilter&#xB294; &#xD544;&#xD130;&#xB97C; &#xC801;&#xC6A9;&#xD560; &#xBC94;&#xC704;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC608;&#xC81C; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C;&#xB294; &quot;*&quot; &#xB85C; &#xC124;&#xC815;&#xD558;&#xBA70; Request&#xB85C; &#xB4E4;&#xC5B4;&#xC624;&#xB294; &#xBAA8;&#xB4E0; URI&#xC5D0; &#xB300;&#xD574; &#xD544;&#xD130;&#xB97C; &#xC801;&#xC6A9;&#xD558;&#xC600;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>SSO&#xC5D0;&#xC11C; &#xD544;&#xD130;&#xC758; &#xD750;&#xB984;&#xACFC; &#xC774;&#xC5D0; &#xB530;&#xB978; &#xCF54;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/utilization/single_sign_on/servlet_filter_flow.png" alt=""></p>
+<h3 id="ssofilterjava">SSOFilter.java</h3>
+<pre><code class="lang-java"><span class="hljs-meta">@WebFilter</span>(<span class="hljs-string">&quot;*&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SSOFilter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Filter</span> </span>{
+  <span class="hljs-keyword">private</span> AuthService authService = <span class="hljs-keyword">new</span> AuthService();
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">final</span> FilterConfig filterConfig)</span> <span class="hljs-keyword">throws</span> ServletException </span>{
+    System.out.println(<span class="hljs-string">&quot;Initializing filter...&quot;</span>);
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doFilter</span><span class="hljs-params">(<span class="hljs-keyword">final</span> ServletRequest request, <span class="hljs-keyword">final</span> ServletResponse response,
+      <span class="hljs-keyword">final</span> FilterChain chain)</span> <span class="hljs-keyword">throws</span> IOException, ServletException </span>{
+
+    <span class="hljs-comment">// Common Request, Response</span>
+    HttpServletRequest req = (HttpServletRequest) request;
+    HttpServletResponse res = (HttpServletResponse) response;
+
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-comment">// 1. Get access token</span>
+      <span class="hljs-keyword">if</span> (authService.hasAccessToken(req)) {
+        <span class="hljs-comment">// 2. Check validity for access token</span>
+        <span class="hljs-keyword">if</span> (authService.verifyAccessToken(req)) {
+          chain.doFilter(req, res);
+        } <span class="hljs-keyword">else</span> {
+          authService.removeAccessTokenFromCookie(req, res);
+          authService.requestAuthCode(req, res);
+        }
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// 3. Redirect to oauth server&apos;s login form</span>
+        <span class="hljs-keyword">if</span> (req.getParameter(<span class="hljs-string">&quot;code&quot;</span>) != <span class="hljs-keyword">null</span>) {
+          authService.addAccessTokenToCookie(req, res);
+          res.sendRedirect(req.getRequestURI());
+        } <span class="hljs-keyword">else</span> {
+          authService.requestAuthCode(req, res);
+        }
+      }
+
+    } <span class="hljs-keyword">catch</span> (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">destroy</span><span class="hljs-params">()</span> </span>{
+    System.err.println(<span class="hljs-string">&quot;Destroying filter...&quot;</span>);
+  }
+}
+</code></pre>
+<h3 id="authservicejava">AuthService.java</h3>
+<p>Authorization Service&#xB97C; &#xC9C0;&#xC6D0;&#xD558;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xB85C; SSO&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xAE30; &#xC704;&#xD574; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xBA54;&#xC11C;&#xB4DC;&#xB4E4;&#xC744; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthService</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String CLIENT_ID = <span class="hljs-string">&quot;trusted&quot;</span>; <span class="hljs-comment">// &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String SECRET = <span class="hljs-string">&quot;secret&quot;</span>; <span class="hljs-comment">// &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; &#xBE44;&#xBC00;&#xBC88;&#xD638;</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String GRANT_TYPE = <span class="hljs-string">&quot;authorization_code&quot;</span>; <span class="hljs-comment">// &#xAD8C;&#xD55C; &#xCDE8;&#xB4DD; &#xBC29;&#xC2DD;</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String SCOPE = <span class="hljs-string">&quot;read&quot;</span>; <span class="hljs-comment">// &#xC811;&#xADFC; &#xC81C;&#xC5B4; &#xBC94;&#xC704;</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String RESPONSE_TYPE = <span class="hljs-string">&quot;code&quot;</span>; <span class="hljs-comment">// &#xC778;&#xC99D;&#xC11C;&#xBC84; &#xC751;&#xB2F5; &#xBC29;&#xC2DD;</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String SERVER_DOMAIN = <span class="hljs-string">&quot;http://localhost:8888&quot;</span>; <span class="hljs-comment">// SSO &#xC11C;&#xBC84;&#xC758; &#xC8FC;&#xC18C;</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String ENDPOINT = <span class="hljs-string">&quot;http://localhost:8080&quot;</span>;<span class="hljs-comment">// OAuth &#xC11C;&#xBC84;&#xC758; &#xC8FC;&#xC18C;</span>
+
+  <span class="hljs-comment">// =============== SSO methods ================ //</span>
+  <span class="hljs-comment">// 1. hasAccessToken</span>
+  <span class="hljs-comment">// 2. findAccessTokenFromCookie</span>
+  <span class="hljs-comment">// 3. addAccessTokenToCookie</span>
+  <span class="hljs-comment">// 4. requestAuthCode</span>
+  <span class="hljs-comment">// 5. verifyAccessToken</span>
+  <span class="hljs-comment">// 6. getAccessTokenInfo</span>
+  <span class="hljs-comment">// 7. removeAccessTokenFromCookie</span>
+  <span class="hljs-comment">// ============================================ //</span>
+}
+</code></pre>
+<p><strong>hasAccessToken</strong></p>
+<p>Access token&#xC774; &#xC788;&#xB294;&#xC9C0; &#xD310;&#xB2E8;&#xD574;&#xC8FC;&#xB294; &#xBA54;&#xC11C;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>findAccessTokenFromCookie &#xBA54;&#xC11C;&#xB4DC; &#xBC18;&#xD658;&#xAC12; &#xD1B5;&#xD574; Access token &#xC874;&#xC7AC; &#xC5EC;&#xBD80;&#xB97C; &#xD655;&#xC778;&#xD574;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java">  <span class="hljs-comment">/**
+   * AccessToken &#xC720;&#xBB34; &#xD655;&#xC778;.
+   * 
+   * <span class="hljs-doctag">@param</span> req HttpServletRequest
+   * <span class="hljs-doctag">@return</span>
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">hasAccessToken</span><span class="hljs-params">(HttpServletRequest req)</span> </span>{
+    <span class="hljs-keyword">boolean</span> result = <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">if</span> (findAccessTokenFromCookie(req) != <span class="hljs-keyword">null</span>) {
+      <span class="hljs-comment">// accessToken&#xC774; &#xC788;&#xB294; &#xACBD;&#xC6B0;</span>
+      result = <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">return</span> result;
+  }
+</code></pre>
+<p><strong>findAccessTokenFromCookie</strong></p>
+<p>Cookie &#xAC12; &#xC911; Access token &#xC744; &#xCC3E;&#xC544;&#xC8FC;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xAC12;&#xC774; &#xC5C6;&#xB294; &#xACBD;&#xC6B0; null &#xAC12;&#xC744; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java">  <span class="hljs-comment">/**
+   * Cookie &#xC5D0;&#xC11C; accessToken&#xAC12;&#xC744; &#xCC3E;&#xB294; &#xD568;&#xC218;.
+   * 
+   * <span class="hljs-doctag">@param</span> req HttpServletRequest
+   * <span class="hljs-doctag">@return</span>
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">findAccessTokenFromCookie</span><span class="hljs-params">(HttpServletRequest req)</span> </span>{
+    String result = <span class="hljs-keyword">null</span>;
+    Cookie[] cookies = req.getCookies();
+    <span class="hljs-keyword">if</span>( <span class="hljs-keyword">null</span> != cookies ) {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; cookies.length; i++) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;accessToken&quot;</span>.equals(cookies[i].getName())) {
+          result = cookies[i].getValue();
+        }
+      }
+    }
+    <span class="hljs-keyword">return</span> result;
+  }
+</code></pre>
+<p><strong>addAccessTokenToCookie</strong></p>
+<p>Access token&#xC744; &#xBC1B;&#xC544;&#xC640; Cookie&#xC5D0; &#xCD94;&#xAC00;&#xD574;&#xC8FC;&#xB294; &#xBA54;&#xC11C;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Login form&#xC73C;&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xC158; &#xD6C4; Resource owner&#xAC00; &#xB85C;&#xADF8;&#xC778;&#xD560; &#xB54C; &#xBC1C;&#xAE09;&#xB418;&#xB294; Auth code, Grant type, Redirectionuri&#xB97C;</p>
+<p>SignOn &#xC11C;&#xBC84;&#xC758; /oauth/token&#xC73C;&#xB85C; Post &#xD558;&#xC5EC; JSONObject &#xD615;&#xD0DC;&#xC758; Access token&#xC744; Cookie&#xC5D0; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>Auth code&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xBA74; Auth code&#xC5D0; &#xB530;&#xB978; Access token&#xC744; Cookie&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB530;&#xB77C;&#xC11C; Access token&#xC744; Cookie&#xC5D0; &#xB4F1;&#xB85D; &#xBC0F; &#xACF5;&#xC720;&#xD558;&#xC5EC; SSO &#xB85C;&#xADF8;&#xC778;&#xC744; &#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java">  <span class="hljs-comment">/**
+   * Access token&#xC744; &#xAC00;&#xC838;&#xC640; Cookie&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;.
+   * <span class="hljs-doctag">@param</span> authCode String
+   * <span class="hljs-doctag">@param</span> req HttpServletRequest
+   * <span class="hljs-doctag">@param</span> res HttpServletResponse
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccessTokenToCookie</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse res)</span>
+      <span class="hljs-keyword">throws</span> Exception </span>{
+    String getToken = ENDPOINT + <span class="hljs-string">&quot;/oauth/token&quot;</span>;
+    String data = <span class="hljs-string">&quot;grant_type=&quot;</span> + GRANT_TYPE + <span class="hljs-string">&quot;&amp;redirect_uri=&quot;</span> + SERVER_DOMAIN
+        + req.getRequestURI() + <span class="hljs-string">&quot;&amp;code=&quot;</span> + req.getParameter(<span class="hljs-string">&quot;code&quot;</span>);
+    String clientInfo = CLIENT_ID + <span class="hljs-string">&quot;:&quot;</span> + SECRET;
+    String accessInfo = sendPost(getToken, data, clientInfo);
+    <span class="hljs-keyword">if</span> (accessInfo != <span class="hljs-keyword">null</span>) {
+      JSONObject accessInfoJson = <span class="hljs-keyword">new</span> JSONObject(accessInfo);
+
+      Cookie cookie = <span class="hljs-keyword">new</span> Cookie(<span class="hljs-string">&quot;accessToken&quot;</span>, accessInfoJson.getString(<span class="hljs-string">&quot;access_token&quot;</span>));
+      res.addCookie(cookie);
+    }
+  }
+</code></pre>
+<p><strong>requestAuthCode</strong></p>
+<p>Auth code&#xB97C; &#xC694;&#xCCAD;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC811;&#xADFC; &#xD558;&#xB824;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; Access token &#xC774; &#xC5C6;&#xB294;&#xACBD;&#xC6B0; SignOn &#xC11C;&#xBC84;&#xC758; oauth/authorize&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xC158; &#xD558;&#xC5EC; &#xAD8C;&#xD55C; &#xC778;&#xC99D;&#xC744; &#xD558;&#xAC8C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xAD8C;&#xD55C; &#xC778;&#xC99D;&#xC758; &#xACB0;&#xACFC;&#xAC12;&#xC740; ?code= &#xD615;&#xD0DC;&#xB85C; &#xBC18;&#xD658;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java"> <span class="hljs-comment">/**
+   * authCode &#xC694;&#xCCAD; (loginPage &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xC158;).
+   * 
+   * <span class="hljs-doctag">@param</span> req HttpServletRequest
+   * <span class="hljs-doctag">@param</span> res HttpServletResponse
+   * <span class="hljs-doctag">@throws</span> IOException IOException
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">requestAuthCode</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse res)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+    res.sendRedirect(ENDPOINT + <span class="hljs-string">&quot;/oauth/authorize?response_type=&quot;</span> + RESPONSE_TYPE + <span class="hljs-string">&quot;&amp;grant_type=&quot;</span>
+        + GRANT_TYPE + <span class="hljs-string">&quot;&amp;scope=&quot;</span> + SCOPE + <span class="hljs-string">&quot;&amp;client_id=&quot;</span> + CLIENT_ID + <span class="hljs-string">&quot;&amp;secret=&quot;</span> + SECRET
+        + <span class="hljs-string">&quot;&amp;redirect_uri=&quot;</span> + SERVER_DOMAIN + req.getRequestURI().toString());
+  }
+</code></pre>
+<p><strong>verifyAccessToken</strong></p>
+<p>Access token&#xC774; &#xC788;&#xB294;&#xC9C0; &#xC720;&#xD6A8;&#xD55C;&#xC9C0; &#xD310;&#xB2E8;&#xD574;&#xC8FC;&#xB294; &#xBA54;&#xC11C;&#xB4DC; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>getAccessTokenInfo &#xBA54;&#xC11C;&#xB4DC; &#xBC18;&#xD658;&#xAC12; &#xD1B5;&#xD574; Access token &#xC720;&#xD6A8;&#xC5EC;&#xBD80;&#xB97C; &#xD655;&#xD574;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java">  <span class="hljs-comment">/**
+   * accessToken &#xC99D;&#xBA85;.
+   * 
+   * <span class="hljs-doctag">@param</span> req HttpServletRequest
+   * <span class="hljs-doctag">@throws</span> Exception Exception
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">verifyAccessToken</span><span class="hljs-params">(HttpServletRequest req)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    <span class="hljs-keyword">boolean</span> result = <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">if</span> (getAccessTokenInfo(req) != <span class="hljs-keyword">null</span>) {
+      <span class="hljs-comment">// accessToken&#xC774; &#xC720;&#xD6A8;&#xD55C; &#xACBD;&#xC6B0;</span>
+      result = <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">return</span> result;
+  }
+</code></pre>
+<p><strong>getAccessTokenInfo</strong></p>
+<p>Access token&#xC758; &#xB4F1;&#xB85D;&#xC815;&#xBCF4;&#xB97C; &#xAC00;&#xC838;&#xC624;&#xB294; &#xBA54;&#xC11C;&#xB4DC; &#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>SignOn &#xC11C;&#xBC84;&#xC758; /oauth/check_token &#xC73C;&#xB85C; &#xC5D1;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xAC12;&#xC744; POST&#xD558;&#xC5EC; JSONObject &#xD615;&#xD0DC;&#xC758; &#xB4F1;&#xB85D;&#xC815;&#xBCF4;&#xB97C; &#xAC00;&#xC838;&#xC635;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC5D1;&#xC138;&#xC2A4; &#xD1A0;&#xD070;&#xAC12;&#xC774; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740;&#xACBD;&#xC6B0; null&#xAC12;&#xC744; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java">  <span class="hljs-comment">/**
+   * accessToken &#xC815;&#xBCF4;&#xB97C; &#xC77D;&#xC5B4;&#xC624;&#xB294; &#xBA54;&#xC11C;&#xB4DC;.
+   * 
+   * <span class="hljs-doctag">@param</span> req HttpServletRequest
+   * <span class="hljs-doctag">@throws</span> Exception Exception
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">private</span> JSONObject <span class="hljs-title">getAccessTokenInfo</span><span class="hljs-params">(HttpServletRequest req)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    String checkAt = <span class="hljs-string">&quot;token=&quot;</span> + findAccessTokenFromCookie(req);
+    String auth = CLIENT_ID + <span class="hljs-string">&quot;:&quot;</span> + SECRET;
+    String checkToken = ENDPOINT + <span class="hljs-string">&quot;/oauth/check_token&quot;</span>;
+    JSONObject result = <span class="hljs-keyword">null</span>;
+
+    String response = sendPost(checkToken, checkAt, auth);
+    <span class="hljs-keyword">if</span> (response != <span class="hljs-keyword">null</span>) {
+      result = <span class="hljs-keyword">new</span> JSONObject(response);
+    }
+    <span class="hljs-keyword">return</span> result;
+  }
+</code></pre>
+<p><strong>removeAccessTokenFromCookie</strong></p>
+<p>Access token&#xC774; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0; Cookie&#xC5D0;&#xC11C; Access token&#xC744; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>Cookie&#xC758; setMaxAge &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; Cookie&#xC758; &#xC720;&#xD6A8;&#xAE30;&#xAC04;&#xC744; 0&#xC73C;&#xB85C; &#xC124;&#xC815;&#xD558;&#xC5EC; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740; Access token&#xC744; &#xC81C;&#xAC70;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java"> <span class="hljs-comment">/**
+   * AccessToken&#xC774; &#xC720;&#xD6A8;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xC6B0; Cookie&#xAC12;&#xC744; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xBA54;&#xC11C;.
+   * <span class="hljs-doctag">@param</span> req HttpServletRequest
+   * <span class="hljs-doctag">@param</span> res HttpServletResponse
+   */</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccessTokenFromCookie</span><span class="hljs-params">(HttpServletRequest req, HttpServletResponse res)</span> 
+      <span class="hljs-keyword">throws</span> Exception </span>{
+    <span class="hljs-keyword">for</span> (Cookie cookie : req.getCookies()) {
+      cookie.setMaxAge(<span class="hljs-number">0</span>);
+      res.addCookie(cookie);
+    }
+  }
+</code></pre>
+<p><strong>sendPost</strong></p>
+<p>SignOn &#xC11C;&#xBC84;&#xC758; /oauth/token&#xC774;&#xB098; /oauth/check_token&#xC73C;&#xB85C; HTTP POST &#xC694;&#xCCAD; &#xBC0F; &#xC751;&#xB2F5;&#xC744; &#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>/oauth/token&#xC73C;&#xB85C; POST &#xC694;&#xCCAD;&#xC744; &#xD558;&#xC5EC; String &#xD615;&#xD0DC;&#xC758; Access token&#xC744; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>/oauth/check_token&#xC73C;&#xB85C; POST &#xC694;&#xCCAD;&#xC744; &#xD558;&#xC5EC; String &#xD615;&#xD0DC;&#xC758; User info&#xB97C; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-java"> <span class="hljs-comment">/**
+   * HTTP POST &#xC694;&#xCCAD;/&#xC751;&#xB2F5; &#xBA54;&#xC11C;&#xB4DC;.
+   * <span class="hljs-doctag">@param</span> uri String
+   * <span class="hljs-doctag">@param</span> params String
+   * <span class="hljs-doctag">@param</span> clientInfo String
+   * <span class="hljs-doctag">@return</span> data String
+   */</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">sendPost</span><span class="hljs-params">(String uri, String params, String clientInfo)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+  URL url = <span class="hljs-keyword">new</span> URL(uri);
+  HttpURLConnection con = (HttpURLConnection) url.openConnection();
+  <span class="hljs-keyword">if</span> (clientInfo != <span class="hljs-keyword">null</span>) {
+    String userpass = clientInfo;
+    String basicAuth =
+        <span class="hljs-string">&quot;Basic &quot;</span> + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes());
+    con.setRequestProperty(<span class="hljs-string">&quot;Authorization&quot;</span>, basicAuth);
+  }
+  con.setRequestMethod(<span class="hljs-string">&quot;POST&quot;</span>);
+  con.setDoOutput(<span class="hljs-keyword">true</span>);
+
+  PrintWriter pw = <span class="hljs-keyword">new</span> PrintWriter(<span class="hljs-keyword">new</span> OutputStreamWriter(con.getOutputStream(), <span class="hljs-string">&quot;UTF-8&quot;</span>));
+  pw.write(params);
+  pw.flush();
+
+  String line;
+  String data = <span class="hljs-string">&quot;&quot;</span>;
+  String result = <span class="hljs-keyword">null</span>;
+
+  <span class="hljs-keyword">if</span> (con.getResponseCode() != <span class="hljs-number">400</span>) {
+    BufferedReader br = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream(), <span class="hljs-string">&quot;UTF-8&quot;</span>));
+    <span class="hljs-keyword">while</span> ((line = br.readLine()) != <span class="hljs-keyword">null</span>) {
+      data += line + <span class="hljs-string">&quot;\n&quot;</span>;
+    }
+
+    pw.close();
+    br.close();
+    result = data;
+  }
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<h2 id="&#xC2E4;&#xD589;-&#xACB0;&#xACFC;">&#xC2E4;&#xD589; &#xACB0;&#xACFC;</h2>
+<p>&#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xC704;&#xD574; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xBCF5;&#xC0AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/utilization/single_sign_on/resource_copy_project.png" alt=""></p>
+<h3 id="servlet">Servlet</h3>
+<p>&#xBCF5;&#xC0AC;&#xD55C; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC758; &#xD3EC;&#xD2B8; &#xBC88;&#xD638;&#xB97C; 8889&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBCC0;&#xACBD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&quot;pom.xml&quot;&#xC5D0;&#xC11C; &#xD3EC;&#xD2B8;&#xB97C; &#xBCC0;&#xACBD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-markup">&lt;httpConnector&gt;
+  &lt;port&gt;8889&lt;/port&gt;
+&lt;/httpConnector&gt;
+</code></pre>
+<p>&#xC774;&#xD6C4;, &#xB450; &#xC11C;&#xBC84;&#xB97C; &#xAD6C;&#xB3D9;&#xD558;&#xAE30; &#xC704;&#xD574; &#xAC01;&#xAC01;&#xC758; ${PROJECT_HOME}&#xC5D0;&#xC11C; &#xB2E4;&#xC74C;&#xC758; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC2E4;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<div><p class="code-filename"><em>Servlet</em></p></div>
+<pre><code class="lang-text">$ mvn jetty:run
+</code></pre>
+<h3 id="spring">Spring</h3>
+<p>&#xBCF5;&#xC0AC;&#xD55C; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC758; &#xD3EC;&#xD2B8; &#xBC88;&#xD638;&#xB97C; 8889&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBCC0;&#xACBD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&quot;application-development.yaml&quot; &#xC5D0;&#xC11C; &#xD3EC;&#xD2B8;&#xB97C; &#xBCC0;&#xACBD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">server:</span>
+  ...
+  port : <span class="hljs-number">8889</span>
+</code></pre>
+<p>&#xC774;&#xD6C4;, &#xB450; &#xC11C;&#xBC84;&#xB97C; &#xAD6C;&#xB3D9;&#xD558;&#xAE30; &#xC704;&#xD574; &#xAC01;&#xAC01;&#xC758; ${PROJECT_HOME}&#xC5D0;&#xC11C; &#xB2E4;&#xC74C;&#xC758; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC2E4;&#xD589;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<div><p class="code-filename"><em>Spring</em></p></div>
+<pre><code class="lang-text">$ mvn spring-boot:run -Dspring.profiles.active=development
+</code></pre>
+<p>localhost:8888/main_page.jsp&#xB85C; &#xC811;&#xC18D;&#xD558;&#xBA74; SignOn &#xC11C;&#xBC84;&#xC758; &#xB85C;&#xADF8;&#xC778; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xC158;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/utilization/single_sign_on/resource_oauth_login.png" alt=""></p>
+<p>&#xC774;&#xD6C4;, &#xB4F1;&#xB85D;&#xD55C; &#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xC99D; &#xC815;&#xBCF4;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xB85C;&#xADF8;&#xC778;&#xC744; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/utilization/single_sign_on/resource_user_login.png" alt=""></p>
+<p>&#xB85C;&#xADF8;&#xC778;&#xC774; &#xC131;&#xACF5;&#xD558;&#xBA74; localhost:8888/main_page.jsp&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xC158;&#xB418;&#xB294; &#xAC83;&#xC744; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/utilization/single_sign_on/resource_main_page1.png" alt=""></p>
+<p>&#xC774;&#xD6C4;, localhost:8889/main_page.jsp&#xB85C; &#xC811;&#xC18D;&#xD558;&#xBA74; &#xBCC4;&#xB3C4;&#xC758; &#xC778;&#xC99D; &#xC808;&#xCC28; &#xC5C6;&#xC774; &#xBA54;&#xC778; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="../../gitbook-assets/utilization/single_sign_on/resource_main_page2.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="spring.html" class="navigation navigation-prev " aria-label="Previous page: Spring 프로젝트 설정">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="auth_control.html" class="navigation navigation-next " aria-label="Next page: 권한 제어">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"리소스 서버 만들기","level":"1.6.2.3","depth":3,"next":{"title":"권한 제어","level":"1.6.2.4","depth":3,"path":"utilization/single_sign_on/auth_control.md","ref":"utilization/single_sign_on/auth_control.md","articles":[]},"previous":{"title":"Spring 프로젝트 설정","level":"1.6.2.2","depth":3,"path":"utilization/single_sign_on/spring.md","ref":"utilization/single_sign_on/spring.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints","codeblock-filename"],"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"codeblock-filename":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"NanumGothic","paperSize":"a4","chapterMark":"both","pageBreaksBefore":"/","margin":{"right":42,"left":62,"top":56,"bottom":56,"   left":42,"   top":56,"   bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"utilization/single_sign_on/resource_server.md","mtime":"2018-09-27T02:44:54.603Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-27T02:45:30.397Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
