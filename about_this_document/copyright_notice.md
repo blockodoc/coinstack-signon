@@ -8,9 +8,9 @@ Copyright © 2018 BLOCKO, Inc. All rights reserved.
 
 ## Restricted Right Legend
 
-All Coinstack Software and documents are protected by copyright laws and internationalconvention. Coinstack software and documents are made available under the term of the BLOCKOLicense Agreement and this document may only be distributed or copied in accordance with theterms of this agreement. No part of this document may be transmitted, copied, deployed, orreproduced in any form or by any means, electronic, mechanical, or optical, without the prior writtenconsent of BLOCKO, Inc. Nothing in this software document and agreement constitutes a transferof intellectual property rights regardless of whether or not such rights are registered\) or any rightsto BLOCKO trademarks, logos, or any other brand features.
+All Coinstack Software and documents are protected by copyright laws and international convention. Coinstack software and documents are made available under the term of the BLOCKO License Agreement and this document may only be distributed or copied in accordance with the terms of this agreement. No part of this document may be transmitted, copied, deployed, orreproduced in any form or by any means, electronic, mechanical, or optical, without the prior writtenconsent of BLOCKO, Inc. Nothing in this software document and agreement constitutes a transferof intellectual property rights regardless of whether or not such rights are registered\) or any rightsto BLOCKO trademarks, logos, or any other brand features.
 
-This document is for information purposes only. The company assumes no direct or indirectresponsibilities ofr the contents of this document, and does not guarantee that the informationcontained in this document satisfies certain legal or commercial conditions. The informationcontained in this document is subject to change without prior notice due to product upgrades orupdates. The company assumes no liability for any errors in this document.
+This document is for information purposes only. The company assumes no direct or indirect responsibilities of the contents of this document, and does not guarantee that the information contained in this document satisfies certain legal or commercial conditions. The information contained in this document is subject to change without prior notice due to product upgrades orupdates. The company assumes no liability for any errors in this document.
 
 해당 소프트웨어\(Coinstack\)와 문서들은 저작권법과 국제 협약으로 보호되고 있습니다. 본 문서와 본 문서에서 언급된 Coinstack 소프트웨어는 BLOCK, Inc와의 사용권 계약 하에서만 사용할 수 있으며, 본 문서는 사용권 계약의 범위 내에서만 배포 또는 복제할 수 있습니다. 이 문서의 전체 또는 일부를 BLOCKO, Inc의 사전 서면 동의 없이 어떠한형식이나 수단\(전자, 기계 또는 광학\)으로도 전송, 복제, 배포, 2차 가공물 작성 등의 행위를 해서는 안됩니다. 이 문서와 소프트웨어의 사용권 계약은 어떤 경우에도 \(등록 여부와 상관없이\) 관련된 지적 재산권을 양도하는 것으로 해석되지 않으며, BLOCKO 브랜드나 로고, 상표 등을 사용할 권한을 부여하지 않습니다.
 
@@ -18,7 +18,7 @@ This document is for information purposes only. The company assumes no direct or
 
 ## Trademarks
 
-Coinstack is registered trademark of BLOCKO, Inc. Other products, titles or services may beregistered trademarks of their respective companies
+Coinstack is registered trademark of BLOCKO, Inc. Other products, titles or services may be registered trademarks of their respective companies
 
 Coinstack은 BLOCKO, Inc의 등록 상표입니다. 기타 제품들과 이름 및 서비스는 각 회사에 귀속되어 있습니다.
 
